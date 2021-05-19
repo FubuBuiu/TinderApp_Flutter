@@ -14,7 +14,7 @@ class _TelaUsuario extends State<TelaUsuario> {
         Container(
           color: Colors.white,
           width: MediaQuery.of(context).size.width,
-          height: 90,
+          height: 500, // 90 é o certo
         ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,

@@ -1,5 +1,21 @@
 import 'package:flutter/cupertino.dart';
+// import 'package:carousel_slider/carousel_controller.dart';
+import 'package:carousel_slider/carousel_options.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+
+final List<Widget> containers = [
+  Container(
+    width: 50,
+    height: 50,
+    color: Colors.black,
+  ),
+  Container(
+    width: 50,
+    height: 50,
+    color: Colors.blue,
+  )
+];
 
 class TelaUsuario extends StatefulWidget {
   @override
@@ -9,38 +25,22 @@ class TelaUsuario extends StatefulWidget {
 class _TelaUsuario extends State<TelaUsuario> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Container(
-          color: Colors.white,
-          width: MediaQuery.of(context).size.width,
-          height: 90, // 90 é o certo
-        ),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Stack(
-              // alignment: Alignment.center,
-              children: <Widget>[
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height - 90,
-                  color: Colors.blue,
-                  alignment: Alignment.center,
-                  child: Text('MATCH'),
-                ),
-              ],
+    return Scaffold(
+      appBar: AppBar(title: Text('Fullscreen sliding carousel demo')),
+      body: Builder(
+        builder: (context) {
+          final double height = MediaQuery.of(context).size.height;
+          return CarouselSlider(
+            options: CarouselOptions(
+              height: height,
+              viewportFraction: 1.0,
+              enlargeCenterPage: false,
+              // autoPlay: false,
             ),
-            // Stack(
-            //   children: <Widget>[
-            //     Container(
-            //       child: Text(''),
-            //     )
-            //   ],
-            // )
-          ],
-        ),
-      ],
+            items: containers.map((item) => Container(child: Center()).to()),
+          );
+        },
+      ),
     );
   }
 }

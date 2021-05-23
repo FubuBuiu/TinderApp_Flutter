@@ -56,7 +56,12 @@ flutter:
      - images/SplashScreen/fogo_Tinder.svg
      - images/SplashScreen/nome_Tinder.svg
      - animation/splashscreen_animation.riv
-     - animation/teste.riv
+     - images/Tela_Usuario/like.svg
+     - images/Tela_Usuario/combo.svg
+     - images/Tela_Usuario/dislike.svg
+     - images/Tela_Usuario/seta.svg
+     - images/Tela_Usuario/retorno.svg
+     - images/Tela_Usuario/superLike.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_tindercard/flutter_tindercard.dart';
 // import 'dart:collection';
 
 class TelaUsuario extends StatefulWidget {
@@ -15,32 +16,22 @@ class TelaUsuario extends StatefulWidget {
 
 class _TelaUsuario extends State<TelaUsuario> {
   final CarouselController _controller = CarouselController();
+  CardController controller;
+  int page = 0;
+  int itemLength = 1;
+  List itemsTemp = [];
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final menuBarHeight = size.height * .08;
     final iconsMenuSize = menuBarHeight * .40;
-    final smallIconsMenu1 = ((size.height -
-                (size.height * .08) -
-                MediaQuery.of(context).padding.top) *
-            .15) *
-        .45;
-    final bigIconsMenu1 = ((size.height -
-                (size.height * .08) -
-                MediaQuery.of(context).padding.top) *
-            .15) *
-        .65;
-    final BoxDecoration decorationButtonsMenu1 = BoxDecoration(
-      boxShadow: [
-        BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 3,
-            blurRadius: 4,
-            offset: Offset(0, 4))
-      ],
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(80),
-    );
+    final paddingBarNotification = MediaQuery.of(context).padding.top;
+    final carouselArea = size.height - menuBarHeight - paddingBarNotification;
+    final heightAreaButtonsMenu1 = carouselArea * .15;
+    final smallButtonMenu1 = heightAreaButtonsMenu1 * .45;
+    final bigButtonMenu1 = heightAreaButtonsMenu1 * .65;
+    final smallIconButtonMenu1 = smallButtonMenu1 * .45;
+    final bigIconButtonMenu1 = bigButtonMenu1 * .45;
 
     var containers = [
       Container(
@@ -48,93 +39,93 @@ class _TelaUsuario extends State<TelaUsuario> {
         child: Stack(
           children: <Widget>[
             Container(
+              // alignment: Alignment.topCenter,
               width: size.width,
               // color: Colors.yellow,
-              height: (size.height -
-                      (size.height * .08) -
-                      MediaQuery.of(context).padding.top) -
-                  ((size.height -
-                          (size.height * .08) -
-                          MediaQuery.of(context).padding.top) *
-                      .15),
+              height: carouselArea,
               child: Stack(
                 alignment: Alignment.center,
                 children: <Widget>[
                   Container(
-                    height: ((size.height -
-                                (size.height * .08) -
-                                MediaQuery.of(context).padding.top) -
-                            ((size.height -
-                                    (size.height * .08) -
-                                    MediaQuery.of(context).padding.top) *
-                                .15)) *
-                        .20,
-                    width: ((size.height -
-                                (size.height * .08) -
-                                MediaQuery.of(context).padding.top) -
-                            ((size.height -
-                                    (size.height * .08) -
-                                    MediaQuery.of(context).padding.top) *
-                                .15)) *
-                        .20,
+                    height: carouselArea * .16,
+                    width: carouselArea * .16,
                     decoration: BoxDecoration(
                         color: Colors.grey,
                         borderRadius: BorderRadius.circular(100)),
                   ),
                   Container(
-                    margin: EdgeInsets.only(
-                        top: ((size.height -
-                                    (size.height * .08) -
-                                    MediaQuery.of(context).padding.top) -
-                                ((size.height -
-                                        (size.height * .08) -
-                                        MediaQuery.of(context).padding.top) *
-                                    .15)) *
-                            .30),
+                    margin: EdgeInsets.only(top: carouselArea * .28),
                     // color: Colors.blue,
                     child: Text(
                       'Não há ninguém perto de você',
                       style: TextStyle(
                           color: Colors.grey[400],
-                          fontSize: ((size.height -
-                                      (size.height * .08) -
-                                      MediaQuery.of(context).padding.top) -
-                                  ((size.height -
-                                          (size.height * .08) -
-                                          MediaQuery.of(context).padding.top) *
-                                      .15)) *
-                              .025),
+                          fontSize: carouselArea * .019),
                     ),
                   )
                 ],
               ),
             ),
             Align(
+              alignment: Alignment.center,
+              child: TinderSwapCard(
+                totalNum: itemLength,
+                maxWidth: size.width,
+                minWidth: size.width * .95,
+                maxHeight: carouselArea,
+                minHeight: carouselArea * .5,
+                cardBuilder: (context, index) => Container(
+                  decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey, blurRadius: 2, spreadRadius: 2),
+                      ]),
+                ),
+                cardController: controller = CardController(),
+                swipeUpdateCallback:
+                    (DragUpdateDetails details, Alignment align) {
+                  /// Get swiping card's alignment
+                  if (align.x < 0) {
+                    //Card is LEFT swiping
+                  } else if (align.x > 0) {
+                    //Card is RIGHT swiping
+                  }
+                  // print(itemsTemp.length);
+                },
+                swipeCompleteCallback:
+                    (CardSwipeOrientation orientation, int index) {
+                  /// Get orientation & index of swiped card!
+                  if (index == (itemsTemp.length - 1)) {
+                    setState(() {
+                      itemLength = itemsTemp.length - 1;
+                    });
+                  }
+                },
+              ),
+            ),
+            Align(
               alignment: Alignment.bottomCenter,
               child: Container(
                 // color: Colors.grey,
-                height: (size.height -
-                        (size.height * .08) -
-                        MediaQuery.of(context).padding.top) *
-                    .15,
+                height: heightAreaButtonsMenu1,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        decoration: decorationButtonsMenu1,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            border:
+                                Border.all(color: Color(0xFFFFB600), width: 2)),
                         alignment: Alignment.center,
-                        height: smallIconsMenu1,
-                        width: smallIconsMenu1,
+                        height: smallButtonMenu1,
+                        width: smallButtonMenu1,
                         child: SvgPicture.asset(
                           'images/Tela_Usuario/retorno.svg',
-                          height: (((size.height -
-                                          (size.height * .08) -
-                                          MediaQuery.of(context).padding.top) *
-                                      .15) *
-                                  .45) *
-                              .60,
+                          height: smallIconButtonMenu1,
                         ),
                       ),
                     ),
@@ -144,18 +135,16 @@ class _TelaUsuario extends State<TelaUsuario> {
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        decoration: decorationButtonsMenu1,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            border:
+                                Border.all(color: Color(0xFFFE496A), width: 2)),
                         alignment: Alignment.center,
-                        height: bigIconsMenu1,
-                        width: bigIconsMenu1,
+                        height: bigButtonMenu1,
+                        width: bigButtonMenu1,
                         child: SvgPicture.asset(
                           'images/Tela_Usuario/dislike.svg',
-                          height: (((size.height -
-                                          (size.height * .08) -
-                                          MediaQuery.of(context).padding.top) *
-                                      .15) *
-                                  .65) *
-                              .45,
+                          height: bigIconButtonMenu1,
                         ),
                       ),
                     ),
@@ -165,18 +154,16 @@ class _TelaUsuario extends State<TelaUsuario> {
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        decoration: decorationButtonsMenu1,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            border:
+                                Border.all(color: Color(0xFF00B9E8), width: 2)),
                         alignment: Alignment.center,
-                        height: smallIconsMenu1,
-                        width: smallIconsMenu1,
+                        height: smallButtonMenu1,
+                        width: smallButtonMenu1,
                         child: SvgPicture.asset(
                           'images/Tela_Usuario/superLike.svg',
-                          height: (((size.height -
-                                          (size.height * .08) -
-                                          MediaQuery.of(context).padding.top) *
-                                      .15) *
-                                  .45) *
-                              .60,
+                          height: smallIconButtonMenu1,
                         ),
                       ),
                     ),
@@ -186,18 +173,16 @@ class _TelaUsuario extends State<TelaUsuario> {
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        decoration: decorationButtonsMenu1,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            border:
+                                Border.all(color: Color(0xFF00E5C3), width: 2)),
                         alignment: Alignment.center,
-                        height: bigIconsMenu1,
-                        width: bigIconsMenu1,
+                        height: bigButtonMenu1,
+                        width: bigButtonMenu1,
                         child: SvgPicture.asset(
                           'images/Tela_Usuario/like.svg',
-                          height: (((size.height -
-                                          (size.height * .08) -
-                                          MediaQuery.of(context).padding.top) *
-                                      .15) *
-                                  .65) *
-                              .45,
+                          height: bigIconButtonMenu1,
                         ),
                       ),
                     ),
@@ -207,18 +192,16 @@ class _TelaUsuario extends State<TelaUsuario> {
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        decoration: decorationButtonsMenu1,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            border:
+                                Border.all(color: Color(0xFFAD2FEB), width: 2)),
                         alignment: Alignment.center,
-                        height: smallIconsMenu1,
-                        width: smallIconsMenu1,
+                        height: smallButtonMenu1,
+                        width: smallButtonMenu1,
                         child: SvgPicture.asset(
                           'images/Tela_Usuario/combo.svg',
-                          height: (((size.height -
-                                          (size.height * .08) -
-                                          MediaQuery.of(context).padding.top) *
-                                      .15) *
-                                  .45) *
-                              .60,
+                          height: smallIconButtonMenu1,
                         ),
                       ),
                     ),
@@ -252,6 +235,32 @@ class _TelaUsuario extends State<TelaUsuario> {
         child: Column(
           children: <Widget>[
             Container(
+              height:
+                  size.height - (size.height * .08) - paddingBarNotification,
+              // color: Colors.blue,
+              child: LayoutBuilder(
+                builder: (_, contraints) {
+                  return SingleChildScrollView(
+                    child: CarouselSlider.builder(
+                      carouselController: _controller,
+                      options: CarouselOptions(
+                        scrollPhysics: NeverScrollableScrollPhysics(),
+                        enableInfiniteScroll: false,
+                        height: size.height -
+                            (size.height * .08) -
+                            paddingBarNotification,
+                        viewportFraction: 1.0,
+                      ),
+                      itemCount: containers.length,
+                      itemBuilder: (context, index, realIndex) {
+                        return containers[index];
+                      },
+                    ),
+                  );
+                },
+              ),
+            ),
+            Container(
               height: menuBarHeight,
               decoration: BoxDecoration(color: Colors.white, boxShadow: [
                 BoxShadow(
@@ -271,12 +280,15 @@ class _TelaUsuario extends State<TelaUsuario> {
                           borderRadius: new BorderRadius.circular(100)),
                       child: FlatButton(
                         onPressed: () {
-                          _controller.animateToPage(0);
+                          setState(() {
+                            page = 0;
+                          });
+                          _controller.animateToPage(page);
                         },
                         child: SvgPicture.asset(
-                          'images/Tela_Usuario/Menu/menu_1.svg',
-                          height: iconsMenuSize,
-                        ),
+                            'images/Tela_Usuario/Menu/menu_1.svg',
+                            height: iconsMenuSize,
+                            color: page == 0 ? null : Colors.grey),
                       ),
                     ),
                   ),
@@ -292,11 +304,15 @@ class _TelaUsuario extends State<TelaUsuario> {
                       height: size.height,
                       child: FlatButton(
                         onPressed: () {
-                          _controller.animateToPage(1);
+                          setState(() {
+                            page = 1;
+                          });
+                          _controller.animateToPage(page);
                         },
                         child: SvgPicture.asset(
                           'images/Tela_Usuario/Menu/menu_2.svg',
                           height: iconsMenuSize,
+                          color: page == 1 ? null : Colors.grey,
                         ),
                       ),
                     ),
@@ -313,12 +329,15 @@ class _TelaUsuario extends State<TelaUsuario> {
                       height: size.height,
                       child: FlatButton(
                         onPressed: () {
-                          _controller.animateToPage(2);
+                          setState(() {
+                            page = 2;
+                          });
+                          _controller.animateToPage(page);
                         },
                         child: SvgPicture.asset(
-                          'images/Tela_Usuario/Menu/menu_3.svg',
-                          height: iconsMenuSize,
-                        ),
+                            'images/Tela_Usuario/Menu/menu_3.svg',
+                            height: iconsMenuSize,
+                            color: page == 2 ? null : Colors.grey),
                       ),
                     ),
                   ),
@@ -334,43 +353,19 @@ class _TelaUsuario extends State<TelaUsuario> {
                       height: size.height,
                       child: FlatButton(
                         onPressed: () {
-                          _controller.animateToPage(3);
+                          setState(() {
+                            page = 3;
+                          });
+                          _controller.animateToPage(page);
                         },
                         child: SvgPicture.asset(
-                          'images/Tela_Usuario/Menu/menu_4.svg',
-                          height: iconsMenuSize,
-                        ),
+                            'images/Tela_Usuario/Menu/menu_4.svg',
+                            height: iconsMenuSize,
+                            color: page == 3 ? null : Colors.grey),
                       ),
                     ),
                   ),
                 ],
-              ),
-            ),
-            Container(
-              height: size.height -
-                  (size.height * .08) -
-                  MediaQuery.of(context).padding.top,
-              // color: Colors.blue,
-              child: LayoutBuilder(
-                builder: (_, contraints) {
-                  return SingleChildScrollView(
-                    child: CarouselSlider.builder(
-                      carouselController: _controller,
-                      options: CarouselOptions(
-                        scrollPhysics: NeverScrollableScrollPhysics(),
-                        enableInfiniteScroll: false,
-                        height: size.height -
-                            (size.height * .08) -
-                            MediaQuery.of(context).padding.top,
-                        viewportFraction: 1.0,
-                      ),
-                      itemCount: containers.length,
-                      itemBuilder: (context, index, realIndex) {
-                        return containers[index];
-                      },
-                    ),
-                  );
-                },
               ),
             ),
           ],

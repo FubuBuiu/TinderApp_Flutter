@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="297mm" height="210mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="10781.14 4009.314 6597.557 12492.432" focusable="false" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
-  <g id="Camada_x0020_1"/>
-  <g id="Camada_x0020_1_0" transform="matrix(1, 0, 0, 1, -464.493561, 366.705444)">
-    <path fill="black" d="M17523.62 11129.23c392.92,-393.62 314.57,-786.53 -118.46,-1062.39l-786.53 -471.97c-393.62,-236.22 -708.18,-786.54 -589.73,-1298.14l983.11 -4131.82c117.76,-471.97 -79.05,-589.73 -471.96,-275.16l-4917.89 4721.78c-393.61,393.61 -314.56,786.53 117.3,1062.39l787.23 471.97c393.62,235.75 708.18,786.53 590.43,1337.55l-1022.99 4091.71c-117.76,511.37 117.76,629.36 471.97,275.16l4957.29 -4721.08 0.23 0z"/>
+<svg width="297mm" height="210mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="7671.586 0 10922.88 21000" focusable="false" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="9812.33" y1="18992.07" x2="16958.2" y2="3345.67">
+      <stop offset="0" stop-opacity="1" stop-color="#BE3BFF"/>
+      <stop offset="0.6706" stop-opacity="1" stop-color="#941ECF"/>
+      <stop offset="1" stop-opacity="1" stop-color="#69009E"/>
+    </linearGradient>
+  </defs>
+  <g id="Camada_x0020_1">
+    <g id="_2804934073744">
+      <g id="Camada_x0020_1_0"/>
+      <g id="Camada_x0020_1_0_1">
+        <path fill="url(#id0)" d="M18083.36 12593.16c660.51,-661.68 528.8,-1322.17 -199.13,-1785.9l-1322.17 -793.39c-661.68,-397.09 -1190.46,-1322.19 -991.35,-2182.2l1652.63 -6945.65c197.96,-793.39 -132.88,-991.35 -793.37,-462.55l-8267.05 7937.39c-661.67,661.67 -528.78,1322.17 197.18,1785.9l1323.35 793.39c661.68,396.3 1190.46,1322.17 992.52,2248.45l-1719.66 6878.23c-197.96,859.62 197.96,1057.97 793.39,462.55l8333.28 -7936.21 0.39 0 -0.01 -0.01z"/>
+      </g>
+    </g>
   </g>
 </svg>

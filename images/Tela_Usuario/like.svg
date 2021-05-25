@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="297mm" height="210mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="10267.753 5867.287 10533.528 9412.108" focusable="false" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+<svg width="297mm" height="210mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="2191.882 0 23416.606 21000" focusable="false" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="5223.4" y1="12235.67" x2="23477.53" y2="3057.8">
+      <stop offset="0" stop-opacity="1" stop-color="#00FFD9"/>
+      <stop offset="0.7608" stop-opacity="1" stop-color="#00E3C1"/>
+      <stop offset="1" stop-opacity="1" stop-color="#00C7A9"/>
+    </linearGradient>
+  </defs>
   <g id="Camada_x0020_1">
-    <g id="like.svg">
-      <g>
-        <path fill="black" d="M20740.88 9191.69c0,-1873.23 -1246.92,-3234.07 -2977.88,-3234.07 -926.78,0 -1424.99,336.87 -2223.08,1111.54 -802.22,-774.67 -1300.83,-1118.43 -2223.87,-1118.43 -1731.16,0 -2984.18,1364 -2984.18,3244.11 0,791.4 279.61,1535.77 798.09,2121.94l4177.38 3830.08c128.09,114.52 336.86,114.52 461.22,0l3772.82 -3425.72 229.04 -208.77 84.41 -94.84 87.57 -90.52c516.51,-584.99 801.63,-1339.2 801.63,-2119.58 0,-3.14 0,-6.69 0,-9.84l-3.15 -5.9zm0 0l0 0 0 0z"/>
+    <g id="_2768720474400">
+      <g id="Camada_x0020_1_0">
+        <g id="like.svg">
+          <g>
+            <path fill="url(#id0)" d="M25535.79 7384.69c0,-4179.49 -2782.09,-7215.76 -6644.15,-7215.76 -2067.8,0 -3179.39,751.61 -4960.07,2480.03 -1789.89,-1728.42 -2902.37,-2495.41 -4961.83,-2495.41 -3862.51,0 -6658.21,3043.31 -6658.21,7238.16 0,1765.75 623.86,3426.56 1780.67,4734.41l9320.44 8545.55c285.79,255.51 751.59,255.51 1029.06,0l8417.8 -7643.36 511.03 -465.8 188.33 -211.6 195.38 -201.97c1152.42,-1305.21 1788.57,-2987.98 1788.57,-4729.14 0,-7.01 0,-14.93 0,-21.95l-7.03 -13.16 0.01 0zm0 0l0 0 0 0z"/>
+          </g>
+        </g>
       </g>
     </g>
   </g>

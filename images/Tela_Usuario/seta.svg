@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="297mm" height="210mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="9571.217 3105.166 9023.249 10661.624" focusable="false" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style type="text/css">
-   
-    .fil0 {fill:black}
-   
-  </style>
-  </defs>
-  <g id="Camada_x0020_1"/>
-  <g id="Camada_x0020_1_0"/>
-  <g id="Camada_x0020_1_0_1">
-    <path class="fil0" d="M10554.28 7792.36l2338.69 -0.54 -6.35 -3632.94c0,-135.43 87.08,-915.86 1216.66,-915.86 1129.57,0 1212.21,759.48 1214.85,942.66l-1.37 3606.18 2296.61 -0.04c908.9,0 1145.36,939.59 614.42,1546.15l-3483.41 3979.52c-404.53,427.43 -801.42,457.93 -1228.81,0l-3577.62 -4020.23c-535.13,-601.29 -85.82,-1504.71 616.33,-1504.9z"/>
+<svg width="297mm" height="210mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="6575.645 182.657 16548.71 20634.686" xmlns="http://www.w3.org/2000/svg">
+  <g id="Camada_x0020_1">
+    <path fill="black" stroke="black" stroke-width="20" stroke-miterlimit="22.9256" d="M18215.12 10092.58c51.3,397.84 538.14,342.24 901.04,345.25 830.8,-11.88 3285.49,-272.95 3844.98,334.49 348.09,1166.49 -476.6,1966.82 -1172.86,2849.35 -1114.59,1412.67 -2401.07,2841.52 -3564.72,4243.69 -869.54,1047.7 -1719.36,2069.07 -2885.76,2798.31l-258.58 53.1 -83.32 2.5c-1355.51,-226.29 -1989.37,-1238.28 -2841.86,-2248.2 -1128.53,-1336.92 -4871.18,-5553.93 -5390.47,-6796.86 -592.63,-1418.43 1335.98,-1294.83 2240.72,-1282.43l587.72 8.09c390.95,7.83 1765.23,86.25 1967.94,-169.83 132.73,-301.78 271.82,-3056.45 343.78,-3751.76 133.16,-1287.26 485.81,-4691.28 1355.43,-5603.08 1218.66,-1046.67 2909.78,-800.07 3613.44,717.1 926.69,1998.15 1072.42,6188.55 1342.52,8500.28z"/>
   </g>
 </svg>

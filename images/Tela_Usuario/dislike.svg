@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="297mm" height="210mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="11636.787 5133.876 6964.262 6918.511" focusable="false" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+<svg width="297mm" height="210mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="3470.479 0 20859.411 20817.343" focusable="false" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="8440.73" y1="15825.53" x2="20294.07" y2="4039.93">
+      <stop offset="0" stop-opacity="1" stop-color="#FF655B"/>
+      <stop offset="0.7882" stop-opacity="1" stop-color="#FE476B"/>
+      <stop offset="1" stop-opacity="1" stop-color="#FD297B"/>
+    </linearGradient>
+  </defs>
   <g id="Camada_x0020_1">
-    <path fill="black" d="M16238.26 8807.66l213.91 -217.92 1788.34 1790.35c400.31,370.36 400.31,925.26 0,1326.42 -308.18,400.74 -924.26,400.74 -1293.76,0l-1790.34 -1764.7 219.06 -209.32 -2033.05 1942.79c-369.65,401.02 -924.26,401.02 -1324.85,0 -400.31,-308.18 -400.31,-924.98 0,-1295.34l1971.59 -2004.54 -210.76 214.34 -1730.17 -1787.48c-430.97,-369.93 -430.97,-924.98 0,-1295.34 139.69,-202.73 370.22,-323.94 616.36,-323.94 246.15,0 476.67,121.21 616.08,324.08l2002.25 1973.88 -216.78 -213.9 1849.95 -1760.12c369.65,-431.82 924.26,-431.82 1293.76,0 400.74,308.61 400.74,924.98 0,1295.34l-1971.16 2004.54 -0.43 0.86z"/>
+    <g id="_2804938162048">
+      <g id="Camada_x0020_1_0">
+        <path fill="url(#id0)" d="M17260.16 11086.11l649.29 -661.45 5428.21 5434.3c1215.07,1124.17 1215.07,2808.47 0,4026.13 -935.43,1216.38 -2805.44,1216.38 -3927,0l-5434.27 -5356.46 664.91 -635.36 -6170.98 5897.02c-1122.01,1217.23 -2805.44,1217.23 -4021.36,0 -1215.07,-935.43 -1215.07,-2807.62 0,-3931.79l5984.44 -6084.44 -639.73 650.59 -5251.65 -5425.6c-1308.14,-1122.86 -1308.14,-2807.62 0,-3931.79 424.01,-615.35 1123.74,-983.27 1870.86,-983.27 747.15,0 1446.85,367.91 1870.01,983.69l6077.49 5991.39 -657.99 -649.26 5615.21 -5342.55c1122.01,-1310.72 2805.44,-1310.72 3927,0 1216.38,936.73 1216.38,2807.62 0,3931.79l-5983.13 6084.44 -1.31 2.61 0 0.01z"/>
+      </g>
+    </g>
   </g>
 </svg>

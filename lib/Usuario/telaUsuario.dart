@@ -18,6 +18,30 @@ class _TelaUsuario extends State<TelaUsuario> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final menuBarHeight = size.height * .08;
+    final iconsMenuSize = menuBarHeight * .40;
+    final smallIconsMenu1 = ((size.height -
+                (size.height * .08) -
+                MediaQuery.of(context).padding.top) *
+            .15) *
+        .45;
+    final bigIconsMenu1 = ((size.height -
+                (size.height * .08) -
+                MediaQuery.of(context).padding.top) *
+            .15) *
+        .65;
+    final BoxDecoration decorationButtonsMenu1 = BoxDecoration(
+      boxShadow: [
+        BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 3,
+            blurRadius: 4,
+            offset: Offset(0, 4))
+      ],
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(80),
+    );
+
     var containers = [
       Container(
         width: size.width,
@@ -33,8 +57,8 @@ class _TelaUsuario extends State<TelaUsuario> {
                           (size.height * .08) -
                           MediaQuery.of(context).padding.top) *
                       .15),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+              child: Stack(
+                alignment: Alignment.center,
                 children: <Widget>[
                   Container(
                     height: ((size.height -
@@ -58,10 +82,28 @@ class _TelaUsuario extends State<TelaUsuario> {
                         borderRadius: BorderRadius.circular(100)),
                   ),
                   Container(
+                    margin: EdgeInsets.only(
+                        top: ((size.height -
+                                    (size.height * .08) -
+                                    MediaQuery.of(context).padding.top) -
+                                ((size.height -
+                                        (size.height * .08) -
+                                        MediaQuery.of(context).padding.top) *
+                                    .15)) *
+                            .30),
                     // color: Colors.blue,
                     child: Text(
-                      'Não há ninguem perto de você',
-                      style: TextStyle(color: Colors.grey),
+                      'Não há ninguém perto de você',
+                      style: TextStyle(
+                          color: Colors.grey[400],
+                          fontSize: ((size.height -
+                                      (size.height * .08) -
+                                      MediaQuery.of(context).padding.top) -
+                                  ((size.height -
+                                          (size.height * .08) -
+                                          MediaQuery.of(context).padding.top) *
+                                      .15)) *
+                              .025),
                     ),
                   )
                 ],
@@ -81,20 +123,10 @@ class _TelaUsuario extends State<TelaUsuario> {
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(80)),
+                        decoration: decorationButtonsMenu1,
                         alignment: Alignment.center,
-                        height: ((size.height -
-                                    (size.height * .08) -
-                                    MediaQuery.of(context).padding.top) *
-                                .15) *
-                            .45,
-                        width: ((size.height -
-                                    (size.height * .08) -
-                                    MediaQuery.of(context).padding.top) *
-                                .15) *
-                            .45,
+                        height: smallIconsMenu1,
+                        width: smallIconsMenu1,
                         child: SvgPicture.asset(
                           'images/Tela_Usuario/retorno.svg',
                           height: (((size.height -
@@ -112,20 +144,10 @@ class _TelaUsuario extends State<TelaUsuario> {
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(80)),
+                        decoration: decorationButtonsMenu1,
                         alignment: Alignment.center,
-                        height: ((size.height -
-                                    (size.height * .08) -
-                                    MediaQuery.of(context).padding.top) *
-                                .15) *
-                            .65,
-                        width: ((size.height -
-                                    (size.height * .08) -
-                                    MediaQuery.of(context).padding.top) *
-                                .15) *
-                            .65,
+                        height: bigIconsMenu1,
+                        width: bigIconsMenu1,
                         child: SvgPicture.asset(
                           'images/Tela_Usuario/dislike.svg',
                           height: (((size.height -
@@ -143,20 +165,10 @@ class _TelaUsuario extends State<TelaUsuario> {
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(80)),
+                        decoration: decorationButtonsMenu1,
                         alignment: Alignment.center,
-                        height: ((size.height -
-                                    (size.height * .08) -
-                                    MediaQuery.of(context).padding.top) *
-                                .15) *
-                            .45,
-                        width: ((size.height -
-                                    (size.height * .08) -
-                                    MediaQuery.of(context).padding.top) *
-                                .15) *
-                            .45,
+                        height: smallIconsMenu1,
+                        width: smallIconsMenu1,
                         child: SvgPicture.asset(
                           'images/Tela_Usuario/superLike.svg',
                           height: (((size.height -
@@ -174,20 +186,10 @@ class _TelaUsuario extends State<TelaUsuario> {
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(80)),
+                        decoration: decorationButtonsMenu1,
                         alignment: Alignment.center,
-                        height: ((size.height -
-                                    (size.height * .08) -
-                                    MediaQuery.of(context).padding.top) *
-                                .15) *
-                            .65,
-                        width: ((size.height -
-                                    (size.height * .08) -
-                                    MediaQuery.of(context).padding.top) *
-                                .15) *
-                            .65,
+                        height: bigIconsMenu1,
+                        width: bigIconsMenu1,
                         child: SvgPicture.asset(
                           'images/Tela_Usuario/like.svg',
                           height: (((size.height -
@@ -205,20 +207,10 @@ class _TelaUsuario extends State<TelaUsuario> {
                     InkWell(
                       onTap: () {},
                       child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(80)),
+                        decoration: decorationButtonsMenu1,
                         alignment: Alignment.center,
-                        height: ((size.height -
-                                    (size.height * .08) -
-                                    MediaQuery.of(context).padding.top) *
-                                .15) *
-                            .45,
-                        width: ((size.height -
-                                    (size.height * .08) -
-                                    MediaQuery.of(context).padding.top) *
-                                .15) *
-                            .45,
+                        height: smallIconsMenu1,
+                        width: smallIconsMenu1,
                         child: SvgPicture.asset(
                           'images/Tela_Usuario/combo.svg',
                           height: (((size.height -
@@ -260,64 +252,94 @@ class _TelaUsuario extends State<TelaUsuario> {
         child: Column(
           children: <Widget>[
             Container(
-              height: size.height * .08,
-              color: Colors.white,
+              height: menuBarHeight,
+              decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 1,
+                    blurRadius: 2,
+                    offset: Offset(0, 0))
+              ]),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  ButtonTheme(
-                    shape: new RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(30)),
-                    height: size.height,
-                    child: FlatButton(
-                      onPressed: () {
-                        _controller.animateToPage(0);
-                      },
-                      child: SvgPicture.asset(
-                        'images/SplashScreen/fogo_Tinder.svg',
-                        width: 25,
+                  SizedBox(
+                    height: menuBarHeight,
+                    width: menuBarHeight,
+                    child: ButtonTheme(
+                      shape: new RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(100)),
+                      child: FlatButton(
+                        onPressed: () {
+                          _controller.animateToPage(0);
+                        },
+                        child: SvgPicture.asset(
+                          'images/Tela_Usuario/Menu/menu_1.svg',
+                          height: iconsMenuSize,
+                        ),
                       ),
                     ),
                   ),
-                  ButtonTheme(
-                    shape: new RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(30)),
-                    height: size.height,
-                    child: FlatButton(
-                      onPressed: () {
-                        _controller.animateToPage(1);
-                      },
-                      child: SvgPicture.asset(
-                        'images/SplashScreen/fogo_Tinder.svg',
-                        width: 25,
+                  SizedBox(
+                    width: size.width * .1,
+                  ),
+                  SizedBox(
+                    height: menuBarHeight,
+                    width: menuBarHeight,
+                    child: ButtonTheme(
+                      shape: new RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(100)),
+                      height: size.height,
+                      child: FlatButton(
+                        onPressed: () {
+                          _controller.animateToPage(1);
+                        },
+                        child: SvgPicture.asset(
+                          'images/Tela_Usuario/Menu/menu_2.svg',
+                          height: iconsMenuSize,
+                        ),
                       ),
                     ),
                   ),
-                  ButtonTheme(
-                    shape: new RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(30)),
-                    height: size.height,
-                    child: FlatButton(
-                      onPressed: () {
-                        _controller.animateToPage(2);
-                      },
-                      child: SvgPicture.asset(
-                        'images/SplashScreen/fogo_Tinder.svg',
-                        width: 25,
+                  SizedBox(
+                    width: size.width * .1,
+                  ),
+                  SizedBox(
+                    height: menuBarHeight,
+                    width: menuBarHeight,
+                    child: ButtonTheme(
+                      shape: new RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(100)),
+                      height: size.height,
+                      child: FlatButton(
+                        onPressed: () {
+                          _controller.animateToPage(2);
+                        },
+                        child: SvgPicture.asset(
+                          'images/Tela_Usuario/Menu/menu_3.svg',
+                          height: iconsMenuSize,
+                        ),
                       ),
                     ),
                   ),
-                  ButtonTheme(
-                    shape: new RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(30)),
-                    height: size.height,
-                    child: FlatButton(
-                      onPressed: () {
-                        _controller.animateToPage(3);
-                      },
-                      child: SvgPicture.asset(
-                        'images/SplashScreen/fogo_Tinder.svg',
-                        width: 25,
+                  SizedBox(
+                    width: size.width * .1,
+                  ),
+                  SizedBox(
+                    height: menuBarHeight,
+                    width: menuBarHeight,
+                    child: ButtonTheme(
+                      shape: new RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(100)),
+                      height: size.height,
+                      child: FlatButton(
+                        onPressed: () {
+                          _controller.animateToPage(3);
+                        },
+                        child: SvgPicture.asset(
+                          'images/Tela_Usuario/Menu/menu_4.svg',
+                          height: iconsMenuSize,
+                        ),
                       ),
                     ),
                   ),

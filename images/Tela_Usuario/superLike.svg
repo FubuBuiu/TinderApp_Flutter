@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="297mm" height="210mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="8849.825 4498.254 10704.657 10683.353" focusable="false" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+<svg width="297mm" height="210mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="3945.387 73.063 20749.817 20744.28" focusable="false" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="8152.87" y1="19110.6" x2="17669.39" y2="6613.79">
+      <stop offset="0" stop-opacity="1" stop-color="#00D9E8"/>
+      <stop offset="0.549" stop-opacity="1" stop-color="#00C6E8"/>
+      <stop offset="1" stop-opacity="1" stop-color="#00B2E8"/>
+    </linearGradient>
+  </defs>
   <g id="Camada_x0020_1">
-    <path fill="black" d="M16093.43 7946.78c-79.35,0 -206.27,-132.12 -248.64,-216.87l-1237.45 -2776.5c-248.64,-523.48 -618.82,-523.48 -825.09,0l-1242.44 2776.5c0,84.55 -121.73,211.47 -248.65,211.47l-2892.83 348.99c-534.07,0 -661,438.93 -243.25,872.66l2147.09 1993.78c79.35,84.55 121.72,264.44 79.35,348.99l-571.05 3035.74c-84.55,518.29 211.47,782.72 703.37,433.74l2480.28 -1475.5 412.35 -0.2 2480.28 1517.87c412.55,306.81 825.09,0 660.99,-518.28l-539.47 -3040.94c0,0 0,-211.47 121.73,-301.42l2067.73 -2041.35c412.55,-433.73 412.55,-867.27 -206.27,-867.27l-2898.03 -301.41z"/>
+    <g id="_2768752961200">
+      <g id="Camada_x0020_1_0">
+        <path fill="url(#id0)" d="M18010.17 6752.65c-154.45,0 -401.49,-257.16 -483.96,-422.12l-2408.59 -5404.24c-483.96,-1018.9 -1204.48,-1018.9 -1605.97,0l-2418.3 5404.24c0,164.57 -236.94,411.6 -483.99,411.6l-5630.65 679.28c-1039.52,0 -1286.58,854.34 -473.46,1698.57l4179.13 3880.72c154.45,164.58 236.91,514.71 154.45,679.28l-1111.5 5908.82c-164.57,1008.81 411.61,1523.5 1369.05,844.24l4827.66 -2871.93 802.61 -0.39 4827.66 2954.41c802.99,597.18 1605.97,0 1286.56,-1008.79l-1050.03 -5918.94c0,0 0,-411.61 236.93,-586.69l4024.67 -3973.31c803,-844.22 803,-1688.07 -401.49,-1688.07l-5640.78 -586.67 0 -0.01z"/>
+      </g>
+      <g id="Camada_x0020_1_0_1"/>
+    </g>
   </g>
-  <g id="Camada_x0020_1_0"/>
 </svg>

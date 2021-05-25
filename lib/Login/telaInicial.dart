@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tinder_app/Login/problemasComLogin.dart';
 import 'package:tinder_app/Login/termos.dart';
 import 'package:tinder_app/Login/politicaPrivacidade.dart';
@@ -194,8 +195,8 @@ class TelaInicial extends StatelessWidget {
                     Align(
                       alignment: Alignment.centerLeft,
                       child: Container(
-                        child: Image.asset(
-                          'images/Tela_Login/balao.png',
+                        child: SvgPicture.asset(
+                          'images/Tela_Login/balao_1.svg',
                           height: 19,
                         ),
                       ),

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="297mm" height="210mm" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="6100.737 292.251 17060.149 20598.155" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="8745.87" y1="17986.01" x2="20075.9" y2="2187.39">
+      <stop offset="0" stop-opacity="1" stop-color="#FD297B"/>
+      <stop offset="0.6" stop-opacity="1" stop-color="#FF5864"/>
+      <stop offset="1" stop-opacity="1" stop-color="#FF655B"/>
+    </linearGradient>
+  </defs>
+  <g id="Camada_x0020_1">
+    <path fill="url(#id0)" d="M23049.57 18583.91c240.52,-3234.46 -1174.82,-4733.75 -3789.15,-6216.93 -1916.26,-1087.24 -127.39,-597.5 678.21,-2571.28 758.06,-1857.64 795.63,-5044.79 -164.21,-6867.23 -1074.58,-2040.43 -3043,-2622.04 -5222.64,-2549.06l-469.13 22.32c-4518.12,448.54 -5764.63,3866.1 -5094.59,7916.92 195.35,1180.94 532.56,2297.39 1552.42,3012.74 162.81,114.19 336.25,232.03 377.69,437.14 15.13,136.32 -75.66,257.49 -424.07,469.46 -1636.55,969.62 -3254.42,2279.35 -4037.07,4068.2 -703.87,1608.88 177.73,2553.58 1598.45,3257.12 1472.33,729.19 3604.86,1129.43 5250.22,1214.74 2347.17,104.33 7454.32,-241.91 9408.14,-1537.37 272.09,-180.42 291.51,-350.11 335.74,-656.76l-0.01 -0.01z"/>
+  </g>
+</svg>

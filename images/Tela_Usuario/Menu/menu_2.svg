@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="46.209 30.806 408.488 414.831" style="shape-rendering: geometricprecision;" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="12379.81" y1="10118.64" x2="18982.01" y2="10118.55">
+      <stop offset="0" style="stop-opacity:1; stop-color:#F5C04F"/>
+      <stop offset="0.451" style="stop-opacity:1; stop-color:#FFDC8F"/>
+      <stop offset="1" style="stop-opacity:1; stop-color:#F5C04F"/>
+    </linearGradient>
+  </defs>
+  <g id="Camada_x0020_1" transform="matrix(0.023814, 0, 0, 0.023814, -111.528999, -0.382503)" style="">
+    <path class="fil0" d="M15239.47 1440.67l0 0c0,4707.89 3851.91,8559.8 8559.8,8559.8l0 0c-4707.89,0 -8559.8,3851.91 -8559.8,8559.8l0 0c0,-4707.89 -3851.91,-8559.8 -8559.8,-8559.8l0 0c4707.89,0 8559.8,-3851.91 8559.8,-8559.8z" style="fill: url(#id0);"/>
+  </g>
+</svg>

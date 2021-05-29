@@ -4,7 +4,8 @@ import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_tindercard/flutter_tindercard.dart';
+import 'package:tinder_app/Usuario/matchCard.dart';
+
 // import 'dart:collection';
 
 class TelaUsuario extends StatefulWidget {
@@ -16,10 +17,46 @@ class TelaUsuario extends StatefulWidget {
 
 class _TelaUsuario extends State<TelaUsuario> {
   final CarouselController _controller = CarouselController();
-  CardController controller;
+  // CardController controller;
   int page = 0;
-  int itemLength = 1;
-  List itemsTemp = [];
+  GlobalKey myKey = GlobalKey();
+  List<Widget> cardList = [];
+  List<Color> colorList = [Colors.red, Colors.green, Colors.blue];
+
+  void _removeCard(index) {
+    setState(() {
+      cardList.remove(index);
+    });
+  }
+
+  // createCards(double width, double height) {
+  //   for (int x = 0; x < 3; x++) {
+  //     cardList.add(
+  //       MatchCard(
+  //         _removeCard,
+  //         index: x,
+  //         color: colorList[x],
+  //         heightScreen: height,
+  //         widthScreen: width,
+  //       ),
+  //     );
+  //   }
+  // }
+
+  @override
+  void initState() {
+    super.initState();
+    for (int x = 0; x < 3; x++) {
+      cardList.add(
+        MatchCard(
+          _removeCard,
+          index: x,
+          color: colorList[x],
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -32,6 +69,18 @@ class _TelaUsuario extends State<TelaUsuario> {
     final bigButtonMenu1 = heightAreaButtonsMenu1 * .65;
     final smallIconButtonMenu1 = smallButtonMenu1 * .45;
     final bigIconButtonMenu1 = bigButtonMenu1 * .45;
+
+    // for (int x = 0; x < 3; x++) {
+    //   cardList.add(
+    //     MatchCard(
+    //       _removeCard,
+    //       index: x,
+    //       color: colorList[x],
+    //       heightScreen: carouselArea,
+    //       widthScreen: size.width,
+    //     ),
+    //   );
+    // }
 
     var containers = [
       Container(
@@ -62,49 +111,14 @@ class _TelaUsuario extends State<TelaUsuario> {
                           color: Colors.grey[400],
                           fontSize: carouselArea * .019),
                     ),
-                  )
+                  ),
+                  // Stack(children: cardList),
                 ],
               ),
             ),
             Align(
-              alignment: Alignment.center,
-              child: TinderSwapCard(
-                totalNum: itemLength,
-                maxWidth: size.width,
-                minWidth: size.width * .95,
-                maxHeight: carouselArea,
-                minHeight: carouselArea * .5,
-                cardBuilder: (context, index) => Container(
-                  decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey, blurRadius: 2, spreadRadius: 2),
-                      ]),
-                ),
-                cardController: controller = CardController(),
-                swipeUpdateCallback:
-                    (DragUpdateDetails details, Alignment align) {
-                  /// Get swiping card's alignment
-                  if (align.x < 0) {
-                    //Card is LEFT swiping
-                  } else if (align.x > 0) {
-                    //Card is RIGHT swiping
-                  }
-                  // print(itemsTemp.length);
-                },
-                swipeCompleteCallback:
-                    (CardSwipeOrientation orientation, int index) {
-                  /// Get orientation & index of swiped card!
-                  if (index == (itemsTemp.length - 1)) {
-                    setState(() {
-                      itemLength = itemsTemp.length - 1;
-                    });
-                  }
-                },
-              ),
-            ),
+                alignment: Alignment.center,
+                child: Stack(key: myKey, children: cardList)),
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(

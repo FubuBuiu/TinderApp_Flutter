@@ -25,7 +25,6 @@ class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
   final riveFile = 'animation/splashscreen_animation.riv';
   Artboard _artboard;
-  // int x = 0;
 
   void _loadRiveFile() async {
     final bytes = await rootBundle.load(riveFile);

@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tinder_app/Usuario/matchCard.dart';
 
-// import 'dart:collection';
-
 class TelaUsuario extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -17,7 +15,6 @@ class TelaUsuario extends StatefulWidget {
 
 class _TelaUsuario extends State<TelaUsuario> {
   final CarouselController _controller = CarouselController();
-  // CardController controller;
   int page = 0;
   GlobalKey myKey = GlobalKey();
   List<Widget> cardList = [];
@@ -28,20 +25,6 @@ class _TelaUsuario extends State<TelaUsuario> {
       cardList.remove(index);
     });
   }
-
-  // createCards(double width, double height) {
-  //   for (int x = 0; x < 3; x++) {
-  //     cardList.add(
-  //       MatchCard(
-  //         _removeCard,
-  //         index: x,
-  //         color: colorList[x],
-  //         heightScreen: height,
-  //         widthScreen: width,
-  //       ),
-  //     );
-  //   }
-  // }
 
   @override
   void initState() {
@@ -69,18 +52,6 @@ class _TelaUsuario extends State<TelaUsuario> {
     final bigButtonMenu1 = heightAreaButtonsMenu1 * .65;
     final smallIconButtonMenu1 = smallButtonMenu1 * .45;
     final bigIconButtonMenu1 = bigButtonMenu1 * .45;
-
-    // for (int x = 0; x < 3; x++) {
-    //   cardList.add(
-    //     MatchCard(
-    //       _removeCard,
-    //       index: x,
-    //       color: colorList[x],
-    //       heightScreen: carouselArea,
-    //       widthScreen: size.width,
-    //     ),
-    //   );
-    // }
 
     var containers = [
       Container(

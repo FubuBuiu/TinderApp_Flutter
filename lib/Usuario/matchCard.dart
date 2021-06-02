@@ -27,23 +27,23 @@ class MatchCard extends StatelessWidget {
       key: myKey,
       child: Draggable(
         onDragEnd: (drag) {
-          print(drag.offset.dx);
-          print(getPosition(myKey));
-          print(widthScreen / -3);
+          // print(drag.offset.dx);
+          // print(getPosition(myKey));
+          // print(widthScreen / -3);
           if (((drag.offset.dy < getPosition(myKey).dy * -4) &&
                   (drag.offset.dx > widthScreen / 3)) ||
               ((drag.offset.dy < getPosition(myKey).dy * -4) &&
                   (drag.offset.dx < widthScreen / -3))) {
-            print("NOTHING");
+            // print("NOTHING");
           } else if (drag.offset.dy < getPosition(myKey).dy * -4) {
             removeCard(this);
-            print("UP");
+            // print("UP");
           } else if (drag.offset.dx > widthScreen / 3) {
             removeCard(this);
-            print("RIGHT");
+            // print("RIGHT");
           } else if (drag.offset.dx < widthScreen / -3) {
             removeCard(this);
-            print("LEFT");
+            // print("LEFT");
           }
         },
         childWhenDragging: Container(),

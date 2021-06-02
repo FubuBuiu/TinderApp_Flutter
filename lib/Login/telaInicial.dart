@@ -14,7 +14,7 @@ class TelaInicial extends StatelessWidget {
     final widthScreen = MediaQuery.of(context).size.width;
     final heightScreen =
         MediaQuery.of(context).size.height - heightNotificationBar;
-    final fontSize = (heightScreen * .1) * .2;
+    final fontSize = (heightScreen * .1) * .165;
     final heightButton = heightScreen * .06;
     final widhtButton = widthScreen * .86;
     final fontSizeButtons = heightButton * .31;
@@ -52,29 +52,29 @@ class TelaInicial extends StatelessWidget {
             ),
           ),
           Container(
-            // color: Colors.amber,
             width: widthScreen,
             height: heightScreen,
             child: Column(children: [
               Container(
-                  height: heightScreen * .6,
+                  height: heightScreen * .58,
                   // alignment: Alignment.center,
                   // color: Colors.black,
                   child: new SvgPicture.asset(
                     "images/Tela_Login/logo_Tinder.svg",
                     color: Colors.white,
                   ),
-                  width: (heightScreen * .50) * .45),
+                  width: (heightScreen * .50) * .40),
               Container(
-                // color: Colors.blue,
-                width: widthScreen * .9,
+                // padding:
+                //     new EdgeInsets.symmetric(horizontal: widthScreen * .14),
+                width: widthScreen,
                 height: heightScreen * .1,
                 child: RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(style: defaultStyle, children: [
                     TextSpan(
                         text:
-                            "Ao tocar em entrar, você concorda com os nossos "),
+                            "Ao tocar em entrar, você concorda com os nossos\n "),
                     TextSpan(
                         text: "Termos",
                         style: linktStyle,
@@ -84,7 +84,8 @@ class TelaInicial extends StatelessWidget {
                                 MaterialPageRoute(builder: (_) => Termos()));
                           }),
                     TextSpan(
-                        text: ". Saiba como processamos seus dados em nossa "),
+                        text:
+                            ". Saiba como processamos seus dados em\n nossa "),
                     TextSpan(
                         text: "Política de Privacidade",
                         style: linktStyle,
@@ -231,7 +232,7 @@ class TelaInicial extends StatelessWidget {
               Container(
                 // color: Colors.black,
                 alignment: Alignment.center,
-                height: heightScreen * .08,
+                height: heightScreen * .1,
                 child: RichText(
                   text: TextSpan(
                     style: TextStyle(

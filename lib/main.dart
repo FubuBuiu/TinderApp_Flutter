@@ -67,24 +67,35 @@ class _SplashScreenState extends State<SplashScreen>
                 alignment: Alignment.center,
               )
             : Container(),
-        Container(
-          margin: EdgeInsets.only(
-              bottom: size.height * .015, left: size.width * .04),
-          // color: Colors.black,
-          child: ClipRect(
-            child: SizedOverflowBox(
-              size: Size(size.width * .36, size.height * .057),
-              child: SlideTransition(
-                position: Tween<Offset>(begin: Offset.zero, end: Offset(-2, 0))
-                    .animate(CurvedAnimation(
-                        parent: AnimationController(
-                            vsync: this, duration: Duration(seconds: 2))
-                          ..forward(),
-                        curve: Interval(0.400, 0.600, curve: Curves.easeIn))),
-                child: SvgPicture.asset(
-                  'images/SplashScreen/nome_Tinder.svg',
-                  height: size.height * .057,
-                  color: Colors.white,
+        Align(
+          alignment: Alignment.centerRight,
+          child: Container(
+            margin: EdgeInsets.only(bottom: size.height * .015),
+            width: size.width * .71,
+            height: size.height * .057,
+            child: ClipRect(
+              child: SizedOverflowBox(
+                size: Size(size.width * .6, size.height * .057),
+                child: SlideTransition(
+                  position: Tween<Offset>(
+                          begin: Offset.zero, end: Offset(-2, 0))
+                      .animate(CurvedAnimation(
+                          parent: AnimationController(
+                              vsync: this, duration: Duration(seconds: 2))
+                            ..forward(),
+                          curve: Interval(0.400, 0.600, curve: Curves.easeIn))),
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: (size.width * .71) * .08,
+                        child: SvgPicture.asset(
+                          'images/SplashScreen/nome_Tinder.svg',
+                          height: size.height * .057,
+                          color: Colors.white,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

@@ -9,6 +9,10 @@ class _EntrarComEmail extends State<EntrarComEmail> {
   TextEditingController _controllerUsuario = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    final widthScreen = MediaQuery.of(context).size.width;
+    final heightScreen = MediaQuery.of(context).size.height -
+        AppBar().preferredSize.height -
+        MediaQuery.of(context).padding.top;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -19,17 +23,18 @@ class _EntrarComEmail extends State<EntrarComEmail> {
         ),
       ),
       body: Container(
-        margin: EdgeInsets.only(right: 40, left: 40, top: 10),
+        margin: EdgeInsets.symmetric(horizontal: widthScreen * .1),
         width: MediaQuery.of(context).size.width,
         child: Column(children: <Widget>[
           Container(
-            margin: EdgeInsets.only(bottom: 40),
+            margin: EdgeInsets.only(
+                top: heightScreen * .02, bottom: heightScreen * .07),
             alignment: Alignment.centerLeft,
             child: Text(
               'Entrar via e-mail',
               style: TextStyle(
                 color: Colors.grey[800],
-                fontSize: 35,
+                fontSize: heightScreen * .055,
               ),
             ),
           ),
@@ -39,7 +44,7 @@ class _EntrarComEmail extends State<EntrarComEmail> {
               controller: _controllerUsuario,
               autofocus: false,
               keyboardType: TextInputType.name,
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: heightScreen * .03),
               cursorColor: Colors.red,
               decoration: new InputDecoration(
                 floatingLabelBehavior: FloatingLabelBehavior.never,
@@ -51,7 +56,8 @@ class _EntrarComEmail extends State<EntrarComEmail> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 5, bottom: 40),
+            margin: EdgeInsets.only(
+                top: heightScreen * .01, bottom: heightScreen * .06),
             child: Text(
               'Enviaremos um link por e-mail que permitirá o login instantâneo',
               style: TextStyle(
@@ -68,7 +74,7 @@ class _EntrarComEmail extends State<EntrarComEmail> {
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
+                  borderRadius: BorderRadius.circular(100)),
               padding: EdgeInsets.all(0),
               child: Ink(
                 decoration: BoxDecoration(
@@ -82,7 +88,7 @@ class _EntrarComEmail extends State<EntrarComEmail> {
                       Color(0xFFFD297B)
                     ],
                   ),
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(100),
                 ),
                 child: Container(
                   padding: EdgeInsets.only(top: 10, bottom: 10),

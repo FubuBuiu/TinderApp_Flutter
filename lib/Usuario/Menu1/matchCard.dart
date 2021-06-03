@@ -20,7 +20,7 @@ class MatchCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final widthScreen = MediaQuery.of(context).size.width;
     final heightScreen = MediaQuery.of(context).size.height -
-        MediaQuery.of(context).size.height * .08 -
+        MediaQuery.of(context).size.height * .07 -
         MediaQuery.of(context).padding.top;
     GlobalKey myKey = GlobalKey();
     return Positioned(

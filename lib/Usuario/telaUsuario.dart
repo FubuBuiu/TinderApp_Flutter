@@ -4,7 +4,8 @@ import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tinder_app/Usuario/matchCard.dart';
+import 'package:tinder_app/Usuario/Menu1/matchCard.dart';
+import 'package:tinder_app/Usuario/Menu2/menu2.dart';
 
 class TelaUsuario extends StatefulWidget {
   @override
@@ -17,12 +18,12 @@ class _TelaUsuario extends State<TelaUsuario> {
   final CarouselController _controller = CarouselController();
   int page = 0;
   GlobalKey myKey = GlobalKey();
-  List<Widget> cardList = [];
-  List<Color> colorList = [Colors.red, Colors.green, Colors.blue];
+  List<Widget> matchCardList = [];
+  List<Color> matchCardColorList = [Colors.red, Colors.green, Colors.blue];
 
   void _removeCard(index) {
     setState(() {
-      cardList.remove(index);
+      matchCardList.remove(index);
     });
   }
 
@@ -30,11 +31,11 @@ class _TelaUsuario extends State<TelaUsuario> {
   void initState() {
     super.initState();
     for (int x = 0; x < 3; x++) {
-      cardList.add(
+      matchCardList.add(
         MatchCard(
           _removeCard,
           index: x,
-          color: colorList[x],
+          color: matchCardColorList[x],
         ),
       );
     }
@@ -43,17 +44,17 @@ class _TelaUsuario extends State<TelaUsuario> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final menuBarHeight = size.height * .08;
+    final menuBarHeight = size.height * .07;
     final iconsMenuSize = menuBarHeight * .40;
     final paddingBarNotification = MediaQuery.of(context).padding.top;
     final carouselArea = size.height - menuBarHeight - paddingBarNotification;
-    final heightAreaButtonsMenu1 = carouselArea * .15;
-    final smallButtonMenu1 = heightAreaButtonsMenu1 * .45;
-    final bigButtonMenu1 = heightAreaButtonsMenu1 * .65;
+    // final heightAreaButtonsMenu1 = carouselArea * .15;
+    final smallButtonMenu1 = carouselArea * .06;
+    final bigButtonMenu1 = carouselArea * .08;
     final smallIconButtonMenu1 = smallButtonMenu1 * .45;
     final bigIconButtonMenu1 = bigButtonMenu1 * .45;
 
-    var containers = [
+    List containers = [
       Container(
         width: size.width,
         child: Stack(
@@ -83,18 +84,19 @@ class _TelaUsuario extends State<TelaUsuario> {
                           fontSize: carouselArea * .019),
                     ),
                   ),
-                  // Stack(children: cardList),
+                  // Stack(children: matchCardList),
                 ],
               ),
             ),
             Align(
                 alignment: Alignment.center,
-                child: Stack(key: myKey, children: cardList)),
+                child: Stack(key: myKey, children: matchCardList)),
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
+                margin: EdgeInsets.only(bottom: carouselArea * .03),
                 // color: Colors.grey,
-                height: heightAreaButtonsMenu1,
+                // height: heightAreaButtonsMenu1,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -197,10 +199,7 @@ class _TelaUsuario extends State<TelaUsuario> {
           ],
         ),
       ),
-      Container(
-        child: Center(child: Text('2')),
-        color: Colors.red,
-      ),
+      Menu2(),
       Container(
         child: Center(child: Text('3')),
         color: Colors.yellow,
@@ -212,16 +211,16 @@ class _TelaUsuario extends State<TelaUsuario> {
     ];
 
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       body: Container(
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
-        color: Colors.grey[200],
+        // color: Colors.grey[200],
         height: size.height,
         width: size.width,
         child: Column(
           children: <Widget>[
             Container(
-              height:
-                  size.height - (size.height * .08) - paddingBarNotification,
+              // height: carouselArea,
               // color: Colors.blue,
               child: LayoutBuilder(
                 builder: (_, contraints) {
@@ -231,9 +230,7 @@ class _TelaUsuario extends State<TelaUsuario> {
                       options: CarouselOptions(
                         scrollPhysics: NeverScrollableScrollPhysics(),
                         enableInfiniteScroll: false,
-                        height: size.height -
-                            (size.height * .08) -
-                            paddingBarNotification,
+                        height: carouselArea,
                         viewportFraction: 1.0,
                       ),
                       itemCount: containers.length,
@@ -268,7 +265,8 @@ class _TelaUsuario extends State<TelaUsuario> {
                           setState(() {
                             page = 0;
                           });
-                          _controller.animateToPage(page);
+                          _controller.animateToPage(page,
+                              duration: Duration(milliseconds: 100));
                         },
                         child: SvgPicture.asset(
                             'images/Tela_Usuario/Menu/menu_1.svg',
@@ -292,7 +290,8 @@ class _TelaUsuario extends State<TelaUsuario> {
                           setState(() {
                             page = 1;
                           });
-                          _controller.animateToPage(page);
+                          _controller.animateToPage(page,
+                              duration: Duration(milliseconds: 100));
                         },
                         child: SvgPicture.asset(
                           'images/Tela_Usuario/Menu/menu_2.svg',
@@ -317,7 +316,8 @@ class _TelaUsuario extends State<TelaUsuario> {
                           setState(() {
                             page = 2;
                           });
-                          _controller.animateToPage(page);
+                          _controller.animateToPage(page,
+                              duration: Duration(milliseconds: 100));
                         },
                         child: SvgPicture.asset(
                             'images/Tela_Usuario/Menu/menu_3.svg',
@@ -341,7 +341,8 @@ class _TelaUsuario extends State<TelaUsuario> {
                           setState(() {
                             page = 3;
                           });
-                          _controller.animateToPage(page);
+                          _controller.animateToPage(page,
+                              duration: Duration(milliseconds: 100));
                         },
                         child: SvgPicture.asset(
                             'images/Tela_Usuario/Menu/menu_4.svg',

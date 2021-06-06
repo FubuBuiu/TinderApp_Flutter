@@ -12,7 +12,6 @@ class MatchCard extends StatelessWidget {
   getPosition(GlobalKey myKey) {
     final RenderBox renderBox = myKey.currentContext.findRenderObject();
     final position = renderBox.localToGlobal(Offset.zero);
-    print(position);
     return position;
   }
 

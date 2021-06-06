@@ -26,6 +26,7 @@ class TelaInicial extends StatelessWidget {
         fontSize: fontSize,
         fontWeight: FontWeight.bold,
         decoration: TextDecoration.underline);
+
     return Container(
       margin: EdgeInsets.only(top: heightNotificationBar),
       child: Stack(

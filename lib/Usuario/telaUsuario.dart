@@ -101,6 +101,8 @@ class _TelaUsuario extends State<TelaUsuario> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
+                      highlightColor: Colors.transparent,
+                      splashColor: Colors.transparent,
                       onTap: () {},
                       child: Container(
                         decoration: BoxDecoration(
@@ -120,6 +122,8 @@ class _TelaUsuario extends State<TelaUsuario> {
                       width: size.width * .03,
                     ),
                     InkWell(
+                      highlightColor: Colors.transparent,
+                      splashColor: Colors.transparent,
                       onTap: () {},
                       child: Container(
                         decoration: BoxDecoration(
@@ -139,6 +143,8 @@ class _TelaUsuario extends State<TelaUsuario> {
                       width: size.width * .03,
                     ),
                     InkWell(
+                      highlightColor: Colors.transparent,
+                      splashColor: Colors.transparent,
                       onTap: () {},
                       child: Container(
                         decoration: BoxDecoration(
@@ -158,6 +164,8 @@ class _TelaUsuario extends State<TelaUsuario> {
                       width: size.width * .03,
                     ),
                     InkWell(
+                      highlightColor: Colors.transparent,
+                      splashColor: Colors.transparent,
                       onTap: () {},
                       child: Container(
                         decoration: BoxDecoration(
@@ -177,6 +185,8 @@ class _TelaUsuario extends State<TelaUsuario> {
                       width: size.width * .03,
                     ),
                     InkWell(
+                      highlightColor: Colors.transparent,
+                      splashColor: Colors.transparent,
                       onTap: () {},
                       child: Container(
                         decoration: BoxDecoration(

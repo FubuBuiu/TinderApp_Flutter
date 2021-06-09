@@ -38,20 +38,20 @@ class _EntrarComEmail extends State<EntrarComEmail> {
               ),
             ),
           ),
-          new Theme(
-            data: new ThemeData(primaryColor: Colors.red),
-            child: TextField(
-              controller: _controllerUsuario,
-              autofocus: false,
-              keyboardType: TextInputType.name,
-              style: TextStyle(fontSize: heightScreen * .03),
-              cursorColor: Colors.red,
-              decoration: new InputDecoration(
-                floatingLabelBehavior: FloatingLabelBehavior.never,
-                hintText: 'Seu e-mail é',
-                border: new UnderlineInputBorder(
-                  borderSide: new BorderSide(color: Colors.red),
-                ),
+          TextField(
+            controller: _controllerUsuario,
+            autofocus: false,
+            keyboardType: TextInputType.name,
+            style: TextStyle(fontSize: heightScreen * .03),
+            cursorColor: Colors.red,
+            decoration: new InputDecoration(
+              floatingLabelBehavior: FloatingLabelBehavior.never,
+              hintText: 'Seu e-mail é',
+              border: new UnderlineInputBorder(
+                borderSide: new BorderSide(color: Colors.red),
+              ),
+              focusedBorder: new UnderlineInputBorder(
+                borderSide: new BorderSide(color: Colors.red),
               ),
             ),
           ),

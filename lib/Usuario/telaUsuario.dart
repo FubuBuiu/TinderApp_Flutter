@@ -18,6 +18,7 @@ class TelaUsuario extends StatefulWidget {
 class _TelaUsuario extends State<TelaUsuario> {
   final CarouselController _controller = CarouselController();
   int page = 0;
+  final x = 3;
   GlobalKey myKey = GlobalKey();
   List<Widget> matchCardList = [];
   List<Color> matchCardColorList = [Colors.red, Colors.green, Colors.blue];

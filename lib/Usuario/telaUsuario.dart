@@ -7,6 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tinder_app/Usuario/Menu1/matchCard.dart';
 import 'package:tinder_app/Usuario/Menu2/menu2.dart';
 import 'package:tinder_app/Usuario/Menu3/menu3.dart';
+import 'package:tinder_app/Usuario/Menu4/menu4.dart';
 
 class TelaUsuario extends StatefulWidget {
   @override
@@ -212,10 +213,7 @@ class _TelaUsuario extends State<TelaUsuario> {
       ),
       Menu2(),
       Menu3(),
-      Container(
-        child: Center(child: Text('4')),
-        color: Colors.black,
-      )
+      Menu4(),
     ];
 
     return Scaffold(

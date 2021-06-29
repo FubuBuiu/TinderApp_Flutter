@@ -219,8 +219,10 @@ class _Menu2 extends State<Menu2> {
       Container(
         // alignment: Alignment.topCenter,
         height: buttonsBarHeight,
-        // width: size.width,
-        color: Colors.white,
+        width: size.width,
+        decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border(bottom: BorderSide(color: Colors.grey[300]))),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[

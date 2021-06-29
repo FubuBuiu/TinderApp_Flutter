@@ -26,7 +26,7 @@ class _Menu3 extends State<Menu3> {
     final carouselArea = size.height - menuBarHeight - paddingBarNotification;
     final searchBar = carouselArea * .1;
     final newMatchesContainerHeight = carouselArea * .25;
-    final messagesContainerHeight = carouselArea * .65;
+    // final messagesContainerHeight = carouselArea * .65;
     for (int x = 0; x < 8; x++) {
       newMatchesList.add(SizedBox(
         width: size.width * .02,
@@ -162,49 +162,3 @@ class _Menu3 extends State<Menu3> {
     );
   }
 }
-
-//  Container(
-//           child: Column(
-//             children: <Widget>[
-//               //30% de altura
-//               Container(
-//                 width: size.width,
-//                 height: newMatchesContainerHeight,
-//                 // color: Colors.red,
-//                 child: Column(
-//                   crossAxisAlignment: CrossAxisAlignment.start,
-//                   children: <Widget>[
-//                     Container(
-//                       padding:
-//                           EdgeInsets.symmetric(horizontal: size.width * .05),
-//                       alignment: Alignment.bottomLeft,
-//                       color: Colors.black,
-//                       width: size.width,
-//                       height: newMatchesContainerHeight * .25,
-//                       child: Text(
-//                         "Novos Matches",
-//                         style: TextStyle(
-//                             color: Colors.red,
-//                             fontWeight: FontWeight.bold,
-//                             fontSize: newMatchesContainerHeight * .08),
-//                       ),
-//                     ),
-//                     SingleChildScrollView(
-//                       scrollDirection: Axis.horizontal,
-//                       child: Row(
-//                           // crossAxisAlignment: CrossAxisAlignment.start,
-//                           // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                           children: newMatchesList),
-//                     )
-//                   ],
-//                 ),
-//               ),
-//               // 63% de altura
-//               Container(
-//                 width: size.width,
-//                 height: messagesContainerHeight,
-//                 color: Colors.yellow,
-//               ),
-//             ],
-//           ),
-//         ),

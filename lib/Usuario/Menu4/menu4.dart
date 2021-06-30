@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:tinder_app/Usuario/Menu4/carouselSlide_AdTinderPlus.dart';
 
 class Menu4 extends StatefulWidget {
   @override
@@ -9,6 +11,7 @@ class Menu4 extends StatefulWidget {
 }
 
 class _Menu4 extends State<Menu4> {
+  final CarouselController _controller = CarouselController();
   @override
   void initState() {
     super.initState();
@@ -21,27 +24,24 @@ class _Menu4 extends State<Menu4> {
     final paddingBarNotification = MediaQuery.of(context).padding.top;
     final carouselArea = size.height - menuBarHeight - paddingBarNotification;
 
-    return Stack(
+    return Column(
       children: [
-        Align(
-          alignment: Alignment.topCenter,
-          child: ClipPath(
-            clipper: OvalBottomBorderClipper(),
-            child: Container(
-              height: carouselArea * .78,
-              width: size.width,
-              color: Colors.white,
-            ),
+        ClipPath(
+          clipper: OvalBottomBorderClipper(),
+          child: Container(
+            height: carouselArea * .7,
+            width: size.width,
+            color: Colors.white,
           ),
         ),
-        Align(
-          alignment: Alignment.bottomCenter,
+        Expanded(
           child: Container(
-            color: Colors.amberAccent,
-            height: carouselArea * .22,
+            // color: Colors.amberAccent,
+            height: carouselArea * .3,
             width: size.width,
+            child: CarouselSlideAdTinderPlus(),
           ),
-        )
+        ),
       ],
     );
   }

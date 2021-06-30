@@ -218,7 +218,7 @@ class _TelaUsuario extends State<TelaUsuario> {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.grey[300],
       body: Container(
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
         // color: Colors.grey[200],
@@ -275,7 +275,7 @@ class _TelaUsuario extends State<TelaUsuario> {
                           _controller.animateToPage(page,
                               duration: Duration(milliseconds: 100));
                         },
-                        child: SvgPicture.asset('svg/Menu/menu_1.svg',
+                        child: SvgPicture.asset('svg/Menu/fire.svg',
                             height: iconsMenuSize,
                             color: page == 0 ? null : Colors.grey),
                       ),

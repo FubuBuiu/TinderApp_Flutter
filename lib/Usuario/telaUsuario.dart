@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:carousel_slider/carousel_controller.dart';
-import 'package:carousel_slider/carousel_options.dart';
+// import 'package:carousel_slider/carousel_controller.dart';
+// import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -115,7 +115,7 @@ class _TelaUsuario extends State<TelaUsuario> {
                         height: smallButtonMenu1,
                         width: smallButtonMenu1,
                         child: SvgPicture.asset(
-                          'images/Tela_Usuario/retorno.svg',
+                          'svg/retorno.svg',
                           height: smallIconButtonMenu1,
                         ),
                       ),
@@ -136,7 +136,7 @@ class _TelaUsuario extends State<TelaUsuario> {
                         height: bigButtonMenu1,
                         width: bigButtonMenu1,
                         child: SvgPicture.asset(
-                          'images/Tela_Usuario/dislike.svg',
+                          'svg/dislike.svg',
                           height: bigIconButtonMenu1,
                         ),
                       ),
@@ -157,7 +157,7 @@ class _TelaUsuario extends State<TelaUsuario> {
                         height: smallButtonMenu1,
                         width: smallButtonMenu1,
                         child: SvgPicture.asset(
-                          'images/Tela_Usuario/superLike.svg',
+                          'svg/superLike.svg',
                           height: smallIconButtonMenu1,
                         ),
                       ),
@@ -178,7 +178,7 @@ class _TelaUsuario extends State<TelaUsuario> {
                         height: bigButtonMenu1,
                         width: bigButtonMenu1,
                         child: SvgPicture.asset(
-                          'images/Tela_Usuario/like.svg',
+                          'svg/like.svg',
                           height: bigIconButtonMenu1,
                         ),
                       ),
@@ -199,7 +199,7 @@ class _TelaUsuario extends State<TelaUsuario> {
                         height: smallButtonMenu1,
                         width: smallButtonMenu1,
                         child: SvgPicture.asset(
-                          'images/Tela_Usuario/combo.svg',
+                          'svg/combo.svg',
                           height: smallIconButtonMenu1,
                         ),
                       ),
@@ -275,8 +275,7 @@ class _TelaUsuario extends State<TelaUsuario> {
                           _controller.animateToPage(page,
                               duration: Duration(milliseconds: 100));
                         },
-                        child: SvgPicture.asset(
-                            'images/Tela_Usuario/Menu/menu_1.svg',
+                        child: SvgPicture.asset('svg/Menu/menu_1.svg',
                             height: iconsMenuSize,
                             color: page == 0 ? null : Colors.grey),
                       ),
@@ -301,7 +300,7 @@ class _TelaUsuario extends State<TelaUsuario> {
                               duration: Duration(milliseconds: 100));
                         },
                         child: SvgPicture.asset(
-                          'images/Tela_Usuario/Menu/menu_2.svg',
+                          'svg/Menu/menu_2.svg',
                           height: iconsMenuSize,
                           color: page == 1 ? null : Colors.grey,
                         ),
@@ -326,8 +325,7 @@ class _TelaUsuario extends State<TelaUsuario> {
                           _controller.animateToPage(page,
                               duration: Duration(milliseconds: 100));
                         },
-                        child: SvgPicture.asset(
-                            'images/Tela_Usuario/Menu/menu_3.svg',
+                        child: SvgPicture.asset('svg/Menu/menu_3.svg',
                             height: iconsMenuSize,
                             color: page == 2 ? null : Colors.grey),
                       ),
@@ -351,8 +349,7 @@ class _TelaUsuario extends State<TelaUsuario> {
                           _controller.animateToPage(page,
                               duration: Duration(milliseconds: 100));
                         },
-                        child: SvgPicture.asset(
-                            'images/Tela_Usuario/Menu/menu_4.svg',
+                        child: SvgPicture.asset('svg/Menu/menu_4.svg',
                             height: iconsMenuSize,
                             color: page == 3 ? null : Colors.grey),
                       ),

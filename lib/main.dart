@@ -89,7 +89,7 @@ class _SplashScreenState extends State<SplashScreen>
                       Positioned(
                         left: (size.width * .71) * .08,
                         child: SvgPicture.asset(
-                          'images/SplashScreen/nome_Tinder.svg',
+                          'svg/nome_Tinder.svg',
                           height: size.height * .057,
                           color: Colors.white,
                         ),

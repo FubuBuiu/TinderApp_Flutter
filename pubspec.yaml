@@ -33,22 +33,22 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - images/Tela_Login/logo_Tinder.svg
+     - svg/logo_Tinder.svg
      - images/Tela_Login/logo_Google.png
      - images/Tela_Login/logo_Facebook.png
-     - images/Tela_Login/balao_1.svg
-     - images/Tela_Usuario/menu_2.svg
-     - images/Tela_Usuario/menu_3.svg
-     - images/Tela_Usuario/menu_4.svg
-     - images/Tela_Usuario/menu_1.svg
-     - images/SplashScreen/nome_Tinder.svg
+     - svg/balao_1.svg
+     - svg/Menu/menu_2.svg
+     - svg/Menu/menu_3.svg
+     - svg/Menu/menu_4.svg
+     - svg/Menu/menu_1.svg
+     - svg/nome_Tinder.svg
      - animation/splashscreen_animation.riv
-     - images/Tela_Usuario/like.svg
-     - images/Tela_Usuario/combo.svg
-     - images/Tela_Usuario/dislike.svg
-     - images/Tela_Usuario/seta.svg
-     - images/Tela_Usuario/retorno.svg
-     - images/Tela_Usuario/superLike.svg
+     - svg/like.svg
+     - svg/combo.svg
+     - svg/dislike.svg
+     - svg/seta.svg
+     - svg/retorno.svg
+     - svg/superLike.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

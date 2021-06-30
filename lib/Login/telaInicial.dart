@@ -61,7 +61,7 @@ class TelaInicial extends StatelessWidget {
                   // alignment: Alignment.center,
                   // color: Colors.black,
                   child: new SvgPicture.asset(
-                    "images/Tela_Login/logo_Tinder.svg",
+                    "svg/logo_Tinder.svg",
                     color: Colors.white,
                   ),
                   width: (heightScreen * .50) * .40),
@@ -211,7 +211,7 @@ class TelaInicial extends StatelessWidget {
                         alignment: Alignment.centerLeft,
                         child: Container(
                           child: SvgPicture.asset(
-                            'images/Tela_Login/balao_1.svg',
+                            'svg/balao_1.svg',
                             height: sizeIconButton,
                           ),
                         ),

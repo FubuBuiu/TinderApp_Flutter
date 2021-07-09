@@ -27,7 +27,7 @@ class _Menu3 extends State<Menu3> {
     final searchBar = carouselArea * .1;
     final newMatchesContainerHeight = carouselArea * .25;
     // final messagesContainerHeight = carouselArea * .65;
-    for (int x = 0; x < 8; x++) {
+    for (int x = 0; x < 3; x++) {
       newMatchesList.add(SizedBox(
         width: size.width * .02,
       ));
@@ -41,7 +41,7 @@ class _Menu3 extends State<Menu3> {
       ),
     );
 
-    for (int x = 0; x < 5; x++) {
+    for (int x = 0; x < 3; x++) {
       messageList.add(MessageListItem());
     }
 

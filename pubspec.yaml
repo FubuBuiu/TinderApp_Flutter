@@ -10,7 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^0.22.0
-  rive: ^0.6.2
+  lottie: ^1.0.1
+  # rive: ^0.6.2
   carousel_slider: ^3.0.0
   cupertino_icons: ^1.0.2
   flutter_custom_clippers: ^2.0.0
@@ -33,22 +34,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - svg/logo_Tinder.svg
-     - images/Tela_Login/logo_Google.png
-     - images/Tela_Login/logo_Facebook.png
-     - svg/balao_1.svg
-     - svg/Menu/menu_2.svg
-     - svg/Menu/menu_3.svg
-     - svg/Menu/menu_4.svg
-     - svg/Menu/fire.svg
-     - svg/nome_Tinder.svg
-     - animation/splashscreen_animation.riv
-     - svg/like.svg
-     - svg/combo.svg
-     - svg/dislike.svg
-     - svg/seta.svg
-     - svg/retorno.svg
-     - svg/superLike.svg
+     - assets/animation/
+     - assets/images/
+     - assets/svg/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -19,12 +19,277 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
     final menuBarHeight = size.height * .07;
     final paddingBarNotification = MediaQuery.of(context).padding.top;
     final carouselArea = size.height - menuBarHeight - paddingBarNotification;
-    final adCarouselArea = (carouselArea * .3) * .5;
+    final adCarouselArea = (carouselArea * .3) * .45;
     List<Widget> ads = [
       Container(
         // color: Colors.amber,
         // alignment: Alignment.topLeft,
-        padding: EdgeInsets.symmetric(horizontal: size.width * .1),
+        padding: EdgeInsets.symmetric(horizontal: size.width * .06),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(bottom: adCarouselArea * .08),
+              // color: Colors.red,
+              height: adCarouselArea * .5,
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                      margin: EdgeInsets.only(right: 15),
+                      child: SvgPicture.asset("svg/blackFire.svg",
+                          height: (carouselArea * 3) * .01)),
+                  Text(
+                    "Faça cada curtida valer a pena",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: size.width * .05),
+                  )
+                ],
+              ),
+            ),
+            Expanded(
+              child: Container(
+                // color: Colors.blue,
+                child: Text(
+                  "Os membros Platinum dão mais Matches e conversam mais",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: size.width * .04),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+      Container(
+        // color: Colors.amber,
+        // alignment: Alignment.topLeft,
+        padding: EdgeInsets.symmetric(horizontal: size.width * .06),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(bottom: adCarouselArea * .08),
+              // color: Colors.red,
+              height: adCarouselArea * .5,
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(right: 15),
+                    child: SvgPicture.asset(
+                      "svg/Menu/fire.svg",
+                      height: (carouselArea * 3) * .01,
+                      color: Color(0xFFE9AA43),
+                    ),
+                  ),
+                  Text(
+                    "Assine o Tinder Gold",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: size.width * .05),
+                  )
+                ],
+              ),
+            ),
+            Expanded(
+              child: Container(
+                // color: Colors.blue,
+                child: Text(
+                  "Veja quem curtiu você e mais!",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: size.width * .04),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+      Container(
+        // color: Colors.amber,
+        // alignment: Alignment.topLeft,
+        padding: EdgeInsets.symmetric(horizontal: size.width * .06),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(bottom: adCarouselArea * .08),
+              // color: Colors.red,
+              height: adCarouselArea * .5,
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(right: 15),
+                    child: SvgPicture.asset(
+                      "svg/combo.svg",
+                      height: (carouselArea * 3) * .01,
+                      color: Color(0xFF941ECF),
+                    ),
+                  ),
+                  Text(
+                    "Faça Matches mais rápido",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: size.width * .05),
+                  )
+                ],
+              ),
+            ),
+            Expanded(
+              child: Container(
+                // color: Colors.blue,
+                child: Text(
+                  "1 Boost gratuito a cada 1 mês",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: size.width * .04),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+      Container(
+        // color: Colors.amber,
+        // alignment: Alignment.topLeft,
+        padding: EdgeInsets.symmetric(horizontal: size.width * .06),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(bottom: adCarouselArea * .08),
+              // color: Colors.red,
+              height: adCarouselArea * .5,
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(right: 15),
+                    child: SvgPicture.asset(
+                      "svg/superLike.svg",
+                      height: (carouselArea * 3) * .01,
+                    ),
+                  ),
+                  Text(
+                    "Chame a atenção com os Super Likes",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: size.width * .045),
+                  )
+                ],
+              ),
+            ),
+            Expanded(
+              child: Container(
+                // color: Colors.blue,
+                child: Text(
+                  "Você terá 3x mais chances de dar um Match!",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: size.width * .04),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+      Container(
+        // color: Colors.amber,
+        // alignment: Alignment.topLeft,
+        padding: EdgeInsets.symmetric(horizontal: size.width * .06),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(bottom: adCarouselArea * .08),
+              // color: Colors.red,
+              height: adCarouselArea * .5,
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(right: 15),
+                    child: Icon(
+                      Icons.location_on,
+                      size: (carouselArea * 3) * .012,
+                      color: Colors.blue[600],
+                    ),
+                  ),
+                  Text(
+                    "Curta perfis mundo afora",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: size.width * .05),
+                  )
+                ],
+              ),
+            ),
+            Expanded(
+              child: Container(
+                // color: Colors.blue,
+                child: Text(
+                  "Passaporte para qualquer lugar com o Tinder Plus!",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: size.width * .04),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+      Container(
+        color: Colors.amber,
+        // alignment: Alignment.topLeft,
+        padding: EdgeInsets.symmetric(horizontal: size.width * .06),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(bottom: adCarouselArea * .08),
+              // color: Colors.red,
+              height: adCarouselArea * .5,
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(right: 15),
+                    child: SvgPicture.asset(
+                      "svg/Menu/fire.svg",
+                      height: (carouselArea * 3) * .01,
+                    ),
+                  ),
+                  Text(
+                    "Controle seu perfil",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: size.width * .05),
+                  )
+                ],
+              ),
+            ),
+            Expanded(
+              child: Container(
+                // color: Colors.blue,
+                child: Text(
+                  "Limite o que os outros veem com o Tinder Plus",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: size.width * .04),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+      Container(
+        // color: Colors.amber,
+        // alignment: Alignment.topLeft,
+        padding: EdgeInsets.symmetric(horizontal: size.width * .06),
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -37,17 +302,17 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(right: 10),
+                    margin: EdgeInsets.only(right: 15),
                     child: SvgPicture.asset(
-                      "svg/Menu/fire.svg",
-                      height: (carouselArea * 3) * .011,
+                      "svg/retorno.svg",
+                      height: (carouselArea * 3) * .01,
                     ),
                   ),
                   Text(
-                    "Faça cada curtida valer a pena",
+                    "Use o Voltar para curtir ou ignorar",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: (carouselArea * 3) * .01),
+                        fontSize: size.width * .05),
                   )
                 ],
               ),
@@ -56,8 +321,9 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
               child: Container(
                 // color: Colors.blue,
                 child: Text(
-                  "Os membros Platinum dão mais Matches e conversam mais",
+                  "Volte quantas vezes quiser com o Tinder Plus!",
                   textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: size.width * .04),
                 ),
               ),
             ),
@@ -65,265 +331,43 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
         ),
       ),
       Container(
-        padding: EdgeInsets.symmetric(horizontal: size.width * .1),
+        // color: Colors.amber,
+        // alignment: Alignment.topLeft,
+        padding: EdgeInsets.symmetric(horizontal: size.width * .06),
         child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
               margin: EdgeInsets.only(bottom: adCarouselArea * .1),
+              // color: Colors.red,
               height: adCarouselArea * .5,
               alignment: Alignment.bottomCenter,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(right: 10),
+                    margin: EdgeInsets.only(right: 15),
                     child: SvgPicture.asset(
-                      "svg/Menu/fire.svg",
-                      height: (carouselArea * 3) * .011,
-                    ),
-                  ),
-                  Text(
-                    "Assine o Tinder Gold",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: (carouselArea * 3) * .01),
-                  )
-                ],
-              ),
-            ),
-            Expanded(
-              child: Container(
-                child: Text(
-                  "Veja quem curtiu você e mais!",
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-      Container(
-        padding: EdgeInsets.symmetric(horizontal: size.width * .1),
-        child: Column(
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(bottom: adCarouselArea * .1),
-              height: adCarouselArea * .5,
-              alignment: Alignment.bottomCenter,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.only(right: 10),
-                    child: SvgPicture.asset(
-                      "svg/Menu/fire.svg",
-                      height: (carouselArea * 3) * .011,
-                    ),
-                  ),
-                  Text(
-                    "Faça Matches mais rápido",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: (carouselArea * 3) * .01),
-                  )
-                ],
-              ),
-            ),
-            Expanded(
-              child: Container(
-                child: Text(
-                  "1 Boost gratuito a cada um mês",
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-      Container(
-        padding: EdgeInsets.symmetric(horizontal: size.width * .1),
-        child: Column(
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(bottom: adCarouselArea * .1),
-              height: adCarouselArea * .5,
-              alignment: Alignment.bottomCenter,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.only(right: 10),
-                    child: SvgPicture.asset(
-                      "svg/Menu/fire.svg",
-                      height: (carouselArea * 3) * .011,
-                    ),
-                  ),
-                  Text(
-                    "Chame atenção com os Super Likes",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: (carouselArea * 3) * .01),
-                  )
-                ],
-              ),
-            ),
-            Expanded(
-              child: Container(
-                child: Text(
-                  "Você terá 3x mais chances de dar um Match!",
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-      Container(
-        padding: EdgeInsets.symmetric(horizontal: size.width * .1),
-        child: Column(
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(bottom: adCarouselArea * .1),
-              height: adCarouselArea * .5,
-              alignment: Alignment.bottomCenter,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.only(right: 10),
-                    child: SvgPicture.asset(
-                      "svg/Menu/fire.svg",
-                      height: (carouselArea * 3) * .011,
-                    ),
-                  ),
-                  Text(
-                    "Curta perfis mundo afora",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: (carouselArea * 3) * .01),
-                  )
-                ],
-              ),
-            ),
-            Expanded(
-              child: Container(
-                child: Text(
-                  "Passaporte para qualquer lugar com o Tinder Plus!",
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-      Container(
-        padding: EdgeInsets.symmetric(horizontal: size.width * .1),
-        child: Column(
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(bottom: adCarouselArea * .1),
-              height: adCarouselArea * .5,
-              alignment: Alignment.bottomCenter,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.only(right: 10),
-                    child: SvgPicture.asset(
-                      "svg/Menu/fire.svg",
-                      height: (carouselArea * 3) * .011,
-                    ),
-                  ),
-                  Text(
-                    "Controle seu perfil",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: (carouselArea * 3) * .01),
-                  )
-                ],
-              ),
-            ),
-            Expanded(
-              child: Container(
-                child: Text(
-                  "Limite o que os outros veem sobre você com o Tinder Plus",
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-      Container(
-        padding: EdgeInsets.symmetric(horizontal: size.width * .1),
-        child: Column(
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(bottom: adCarouselArea * .1),
-              height: adCarouselArea * .5,
-              alignment: Alignment.bottomCenter,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.only(right: 10),
-                    child: SvgPicture.asset(
-                      "svg/Menu/fire.svg",
-                      height: (carouselArea * 3) * .011,
-                    ),
-                  ),
-                  Text(
-                    "Use o Voltar para curtir ou ignorar",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: (carouselArea * 3) * .01),
-                  )
-                ],
-              ),
-            ),
-            Expanded(
-              child: Container(
-                child: Text(
-                  "Volte quantas vezes quiser com o Tinder Plus",
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-      Container(
-        padding: EdgeInsets.symmetric(horizontal: size.width * .1),
-        child: Column(
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(bottom: adCarouselArea * .1),
-              height: adCarouselArea * .5,
-              alignment: Alignment.bottomCenter,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.only(right: 10),
-                    child: SvgPicture.asset(
-                      "svg/Menu/fire.svg",
-                      height: (carouselArea * 3) * .011,
+                      "svg/like.svg",
+                      height: (carouselArea * 3) * .01,
                     ),
                   ),
                   Text(
                     "Aumente suas chances",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: (carouselArea * 3) * .01),
+                        fontSize: size.width * .05),
                   )
                 ],
               ),
             ),
             Expanded(
               child: Container(
+                // color: Colors.blue,
                 child: Text(
                   "Descole curtidas ilimitadas com o Tinder Plus!",
                   textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: size.width * .04),
                 ),
               ),
             ),
@@ -377,7 +421,7 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
           child: Container(
             padding: EdgeInsets.symmetric(
                 vertical: (carouselArea * .3) * .07,
-                horizontal: size.width * .2),
+                horizontal: size.width * .22),
             width: size.width,
             child: ButtonTheme(
               splashColor: Colors.transparent,
@@ -398,10 +442,10 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
                       color: _current == 0
                           ? Colors.black
                           : _current == 1
-                              ? Colors.yellow
+                              ? Color(0xFFE9AA43)
                               : Colors.red,
                       fontWeight: FontWeight.bold,
-                      fontSize: (carouselArea * .3) * .085),
+                      fontSize: size.width * .04),
                 ),
               ),
             ),

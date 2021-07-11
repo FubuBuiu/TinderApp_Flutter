@@ -66,50 +66,51 @@ class TelaInicial extends StatelessWidget {
                   ),
                   width: (heightScreen * .50) * .40),
               Container(
-                // padding:
-                //     new EdgeInsets.symmetric(horizontal: widthScreen * .14),
+                padding: new EdgeInsets.symmetric(horizontal: widthScreen * .1),
                 width: widthScreen,
                 height: heightScreen * .1,
-                child: RichText(
-                  textAlign: TextAlign.center,
-                  text: TextSpan(style: defaultStyle, children: [
-                    TextSpan(
-                        text:
-                            "Ao tocar em entrar, você concorda com os nossos\n "),
-                    TextSpan(
-                        text: "Termos",
-                        style: linktStyle,
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (_) => Termos()));
-                          }),
-                    TextSpan(
-                        text:
-                            ". Saiba como processamos seus dados em\n nossa "),
-                    TextSpan(
-                        text: "Política de Privacidade",
-                        style: linktStyle,
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (_) => PoliticaPrivacidade()));
-                          }),
-                    TextSpan(text: " e "),
-                    TextSpan(
-                        text: "Política de Cookies",
-                        style: linktStyle,
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (_) => PoliticaCookies()));
-                          }),
-                    TextSpan(text: "."),
-                  ]),
+                child: FittedBox(
+                  child: RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(style: defaultStyle, children: [
+                      TextSpan(
+                          text:
+                              "Ao tocar em entrar, você concorda com os nossos\n "),
+                      TextSpan(
+                          text: "Termos",
+                          style: linktStyle,
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (_) => Termos()));
+                            }),
+                      TextSpan(
+                          text:
+                              ". Saiba como processamos seus dados em\n nossa "),
+                      TextSpan(
+                          text: "Política de Privacidade",
+                          style: linktStyle,
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => PoliticaPrivacidade()));
+                            }),
+                      TextSpan(text: " e "),
+                      TextSpan(
+                          text: "Política de Cookies",
+                          style: linktStyle,
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => PoliticaCookies()));
+                            }),
+                      TextSpan(text: "."),
+                    ]),
+                  ),
                 ),
               ),
               SizedBox(
@@ -123,7 +124,7 @@ class TelaInicial extends StatelessWidget {
                     highlightColor: Colors.transparent,
                     color: Colors.white,
                     onPressed: () {
-                      Navigator.push(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (_) => TelaUsuario()));
                     },
                     child: Stack(children: <Widget>[
@@ -162,7 +163,7 @@ class TelaInicial extends StatelessWidget {
                     highlightColor: Colors.transparent,
                     color: Colors.white,
                     onPressed: () {
-                      Navigator.push(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (_) => TelaUsuario()));
                     },
                     child: Stack(children: <Widget>[
@@ -203,7 +204,7 @@ class TelaInicial extends StatelessWidget {
                     highlightColor: Colors.transparent,
                     color: Colors.white,
                     onPressed: () => {
-                      Navigator.push(context,
+                      Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (_) => TelaUsuario()))
                     },
                     child: Stack(children: <Widget>[

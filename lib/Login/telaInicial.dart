@@ -11,255 +11,233 @@ class TelaInicial extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final heightNotificationBar = MediaQuery.of(context).padding.top;
-    final widthScreen = MediaQuery.of(context).size.width;
-    final heightScreen =
-        MediaQuery.of(context).size.height - heightNotificationBar;
-    final fontSize = (heightScreen * .1) * .165;
+    final size = MediaQuery.of(context).size;
+    final heightScreen = size.height - heightNotificationBar;
     final heightButton = heightScreen * .06;
-    final widhtButton = widthScreen * .86;
-    final fontSizeButtons = heightButton * .31;
+    final textSizeButton = heightButton * .31;
     final sizeIconButton = heightButton * .35;
-    TextStyle defaultStyle = TextStyle(
-        color: Colors.white, fontSize: fontSize, fontWeight: FontWeight.bold);
+    TextStyle defaultStyle =
+        TextStyle(color: Colors.white, fontWeight: FontWeight.bold);
     TextStyle linktStyle = TextStyle(
         color: Colors.white,
-        fontSize: fontSize,
         fontWeight: FontWeight.bold,
         decoration: TextDecoration.underline);
 
-    return Container(
-      margin: EdgeInsets.only(top: heightNotificationBar),
-      child: Stack(
-        children: <Widget>[
-          Container(
-            height: heightScreen,
-            decoration: BoxDecoration(
-              color: Color(0xFFFD297B),
+    return Scaffold(
+      body: Container(
+        margin: EdgeInsets.only(top: heightNotificationBar),
+        child: Stack(
+          children: <Widget>[
+            Container(
+              height: heightScreen,
+              decoration: BoxDecoration(
+                color: Color(0xFFFD297B),
+              ),
             ),
-          ),
-          Container(
-            height: heightScreen,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topRight,
-                end: Alignment.bottomCenter,
-                stops: [0.1, 0.4, 0.8],
-                colors: [
-                  Color(0xFFFF655B),
-                  Color.fromARGB(255, 255, 88, 100),
-                  Color.fromARGB(30, 255, 88, 100)
+            Container(
+              height: heightScreen,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomCenter,
+                  stops: [0.1, 0.4, 0.8],
+                  colors: [
+                    Color(0xFFFF655B),
+                    Color.fromARGB(255, 255, 88, 100),
+                    Color.fromARGB(30, 255, 88, 100)
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              width: size.width,
+              height: heightScreen,
+              child: Column(
+                children: [
+                  Container(
+                      height: heightScreen * .6,
+                      // alignment: Alignment.center,
+                      // color: Colors.black,
+                      child: new SvgPicture.asset(
+                        "assets/svg/logo_Tinder.svg",
+                        color: Colors.white,
+                      ),
+                      width: (heightScreen * .50) * .40),
+                  Expanded(
+                    child: Container(
+                      width: size.width,
+                      padding: new EdgeInsets.symmetric(
+                          horizontal: size.width * .04),
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(
+                            child: FittedBox(
+                              child: RichText(
+                                textAlign: TextAlign.center,
+                                text: TextSpan(
+                                  style: defaultStyle,
+                                  children: [
+                                    TextSpan(
+                                        text:
+                                            "Ao tocar em entrar, você concorda com os nossos\n "),
+                                    TextSpan(
+                                        text: "Termos",
+                                        style: linktStyle,
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (_) => Termos()));
+                                          }),
+                                    TextSpan(
+                                        text:
+                                            ". Saiba como processamos seus dados em\n nossa "),
+                                    TextSpan(
+                                        text: "Política de Privacidade",
+                                        style: linktStyle,
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (_) =>
+                                                        PoliticaPrivacidade()));
+                                          }),
+                                    TextSpan(text: " e "),
+                                    TextSpan(
+                                        text: "Política de Cookies",
+                                        style: linktStyle,
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (_) =>
+                                                        PoliticaCookies()));
+                                          }),
+                                    TextSpan(text: "."),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: size.height * .02,
+                          ),
+                          buttonLogin(
+                            heightButton,
+                            "assets/svg/googleIcon.svg",
+                            sizeIconButton,
+                            "ENTRAR COM O GOOGLE",
+                            textSizeButton,
+                            () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => TelaUsuario()));
+                            },
+                          ),
+                          SizedBox(
+                            height: size.height * .02,
+                          ),
+                          buttonLogin(
+                            heightButton,
+                            "assets/svg/facebookIcon.svg",
+                            sizeIconButton,
+                            "ENTRAR COM O FACEBOOK",
+                            textSizeButton,
+                            () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => TelaUsuario()));
+                            },
+                          ),
+                          SizedBox(
+                            height: size.height * .02,
+                          ),
+                          buttonLogin(
+                            heightButton,
+                            "assets/svg/balao.svg",
+                            sizeIconButton,
+                            "ENTRAR COM NÚMERO DE TELEFONE",
+                            textSizeButton,
+                            () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => TelaUsuario()));
+                            },
+                          ),
+                          Expanded(
+                              child: Container(
+                            alignment: Alignment.center,
+                            child: GestureDetector(
+                              child: Text(
+                                "Problemas para fazero login?",
+                                style: TextStyle(
+                                    fontSize: size.width * .038,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ProblemaLogin()));
+                              },
+                            ),
+                          ))
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
-          ),
-          Container(
-            width: widthScreen,
-            height: heightScreen,
-            child: Column(children: [
-              Container(
-                  height: heightScreen * .58,
-                  // alignment: Alignment.center,
-                  // color: Colors.black,
-                  child: new SvgPicture.asset(
-                    "assets/svg/logo_Tinder.svg",
-                    color: Colors.white,
-                  ),
-                  width: (heightScreen * .50) * .40),
-              Container(
-                padding: new EdgeInsets.symmetric(horizontal: widthScreen * .1),
-                width: widthScreen,
-                height: heightScreen * .1,
-                child: FittedBox(
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(style: defaultStyle, children: [
-                      TextSpan(
-                          text:
-                              "Ao tocar em entrar, você concorda com os nossos\n "),
-                      TextSpan(
-                          text: "Termos",
-                          style: linktStyle,
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (_) => Termos()));
-                            }),
-                      TextSpan(
-                          text:
-                              ". Saiba como processamos seus dados em\n nossa "),
-                      TextSpan(
-                          text: "Política de Privacidade",
-                          style: linktStyle,
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (_) => PoliticaPrivacidade()));
-                            }),
-                      TextSpan(text: " e "),
-                      TextSpan(
-                          text: "Política de Cookies",
-                          style: linktStyle,
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (_) => PoliticaCookies()));
-                            }),
-                      TextSpan(text: "."),
-                    ]),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: widhtButton,
-                height: heightButton,
-                child: ButtonTheme(
-                  shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(100)),
-                  child: FlatButton(
-                    splashColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    color: Colors.white,
-                    onPressed: () {
-                      Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (_) => TelaUsuario()));
-                    },
-                    child: Stack(children: <Widget>[
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Image.asset(
-                          'images/Tela_Login/logo_Google.png',
-                          height: sizeIconButton,
-                        ),
-                      ),
-                      Align(
-                          alignment: Alignment.center,
-                          child: Text(
-                            "ENTRAR COM O GOOGLE",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey[700],
-                                fontSize: fontSizeButtons),
-                            textAlign: TextAlign.center,
-                          ))
-                    ]),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: heightScreen * .02,
-              ),
-              SizedBox(
-                width: widhtButton,
-                height: heightButton,
-                child: ButtonTheme(
-                  shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(30)),
-                  child: FlatButton(
-                    splashColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    color: Colors.white,
-                    onPressed: () {
-                      Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (_) => TelaUsuario()));
-                    },
-                    child: Stack(children: <Widget>[
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Container(
-                          child: Image.asset(
-                            'images/Tela_Login/logo_Facebook.png',
-                            height: sizeIconButton,
-                          ),
-                        ),
-                      ),
-                      Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          'ENTRAR COM O FACEBOOK',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey[700],
-                              fontSize: fontSizeButtons),
-                        ),
-                      ),
-                    ]),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: heightScreen * .02,
-              ),
-              SizedBox(
-                width: widhtButton,
-                height: heightButton,
-                child: ButtonTheme(
-                  shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(30)),
-                  child: FlatButton(
-                    splashColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    color: Colors.white,
-                    onPressed: () => {
-                      Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (_) => TelaUsuario()))
-                    },
-                    child: Stack(children: <Widget>[
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Container(
-                          child: SvgPicture.asset(
-                            'assets/svg/balao_1.svg',
-                            height: sizeIconButton,
-                          ),
-                        ),
-                      ),
-                      Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          'ENTRAR COM NÚMERO DE TELEFONE',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey[700],
-                              fontSize: fontSizeButtons),
-                        ),
-                      ),
-                    ]),
-                  ),
-                ),
-              ),
-              Container(
-                // color: Colors.black,
-                alignment: Alignment.center,
-                height: heightScreen * .1,
-                child: RichText(
-                  text: TextSpan(
-                    style: TextStyle(
-                        fontSize: (heightScreen * .08) * .25,
-                        fontFamily: "Arial",
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                    children: [
-                      TextSpan(
-                          text: 'Problemas para fazer o login?',
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ProblemaLogin()));
-                            }),
-                    ],
-                  ),
-                ),
-              ),
-            ]),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
+}
+
+Widget buttonLogin(height, icon, sizeIcon, text, textSize, Function action) {
+  return SizedBox(
+    // width: width,
+    height: height,
+    child: ButtonTheme(
+      shape: new RoundedRectangleBorder(
+          borderRadius: new BorderRadius.circular(100)),
+      child: FlatButton(
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        color: Colors.white,
+        onPressed: action,
+        child: Stack(
+          children: <Widget>[
+            Align(
+              alignment: Alignment.centerLeft,
+              child: SvgPicture.asset(
+                icon,
+                height: sizeIcon,
+              ),
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Text(
+                text,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[700],
+                    fontSize: textSize),
+                textAlign: TextAlign.center,
+              ),
+            )
+          ],
+        ),
+      ),
+    ),
+  );
 }

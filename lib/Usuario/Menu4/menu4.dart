@@ -199,6 +199,8 @@ class _Menu4 extends State<Menu4> {
                               InkWell(
                                 onTap: () {},
                                 child: Container(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: (sizeButtonCamera * .9) * .3),
                                   margin: EdgeInsets.only(
                                       bottom: heightAreaButtons * .07),
                                   width: sizeButtonCamera * .9,
@@ -206,10 +208,10 @@ class _Menu4 extends State<Menu4> {
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       color: Colors.grey[100]),
-                                  child: Icon(
-                                    Icons.settings,
+                                  child: SvgPicture.asset(
+                                    "assets/svg/lapis.svg",
                                     color: Colors.grey[400],
-                                    size: (sizeButtonCamera * .9) * .45,
+                                    height: (sizeButtonCamera * .9) * .45,
                                   ),
                                 ),
                               ),

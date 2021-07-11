@@ -23,27 +23,21 @@ class _SplashScreenState extends State<SplashScreen>
     super.initState();
     changeStatusBar();
     _controller = AnimationController(vsync: this);
-    // Future.delayed(Duration(seconds: 3), () {
-    // Navigator.pushReplacement(
-    //     context, MaterialPageRoute(builder: (_) => TelaInicial()));
-    // });
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _controller.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    // final size = MediaQuery.of(context).size;
     return SizedBox.expand(
       child: FittedBox(
         fit: BoxFit.cover,
-        child: Lottie.network(
-          "https://assets6.lottiefiles.com/packages/lf20_9mxwdghu.json",
+        child: Lottie.asset(
+          "assets/animation/splash_screen.json",
           fit: BoxFit.fill,
           controller: _controller,
           onLoaded: (composition) {

@@ -38,7 +38,7 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
                 children: <Widget>[
                   Container(
                       margin: EdgeInsets.only(right: 15),
-                      child: SvgPicture.asset("svg/blackFire.svg",
+                      child: SvgPicture.asset("assets/svg/blackFire.svg",
                           height: (carouselArea * 3) * .01)),
                   Text(
                     "Faça cada curtida valer a pena",
@@ -80,7 +80,7 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
                   Container(
                     margin: EdgeInsets.only(right: 15),
                     child: SvgPicture.asset(
-                      "svg/Menu/fire.svg",
+                      "assets/svg/fire.svg",
                       height: (carouselArea * 3) * .01,
                       color: Color(0xFFE9AA43),
                     ),
@@ -125,7 +125,7 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
                   Container(
                     margin: EdgeInsets.only(right: 15),
                     child: SvgPicture.asset(
-                      "svg/combo.svg",
+                      "assets/svg/combo.svg",
                       height: (carouselArea * 3) * .01,
                       color: Color(0xFF941ECF),
                     ),
@@ -170,7 +170,7 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
                   Container(
                     margin: EdgeInsets.only(right: 15),
                     child: SvgPicture.asset(
-                      "svg/superLike.svg",
+                      "assets/svg/superLike.svg",
                       height: (carouselArea * 3) * .01,
                     ),
                   ),
@@ -243,7 +243,7 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
         ),
       ),
       Container(
-        color: Colors.amber,
+        // color: Colors.amber,
         // alignment: Alignment.topLeft,
         padding: EdgeInsets.symmetric(horizontal: size.width * .06),
         child: Column(
@@ -260,7 +260,7 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
                   Container(
                     margin: EdgeInsets.only(right: 15),
                     child: SvgPicture.asset(
-                      "svg/Menu/fire.svg",
+                      "assets/svg/chave.svg",
                       height: (carouselArea * 3) * .01,
                     ),
                   ),
@@ -304,7 +304,7 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
                   Container(
                     margin: EdgeInsets.only(right: 15),
                     child: SvgPicture.asset(
-                      "svg/retorno.svg",
+                      "assets/svg/retorno.svg",
                       height: (carouselArea * 3) * .01,
                     ),
                   ),
@@ -348,7 +348,7 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
                   Container(
                     margin: EdgeInsets.only(right: 15),
                     child: SvgPicture.asset(
-                      "svg/like.svg",
+                      "assets/svg/like.svg",
                       height: (carouselArea * 3) * .01,
                     ),
                   ),
@@ -385,11 +385,13 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
                 items: ads,
                 carouselController: _controller,
                 options: CarouselOptions(
-                    // scrollPhysics: NeverScrollableScrollPhysics(),
                     height: adCarouselArea,
                     enableInfiniteScroll: false,
                     viewportFraction: 1.0,
-                    // autoPlay: true,
+                    autoPlay: true,
+                    autoPlayInterval: Duration(seconds: 2),
+                    autoPlayAnimationDuration: Duration(milliseconds: 500),
+                    autoPlayCurve: Curves.fastLinearToSlowEaseIn,
                     onPageChanged: (index, reason) {
                       setState(() {
                         _current = index;
@@ -409,10 +411,59 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
                 margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 2.0),
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: (Theme.of(context).brightness == Brightness.dark
-                            ? Colors.white
-                            : Colors.black)
-                        .withOpacity(_current == entry.key ? 0.9 : 0.4)),
+                    color: Colors.black
+                        .withAlpha(_current == entry.key ? 255 : 100)
+                        .withRed(
+                          _current == 1 && _current == entry.key
+                              ? 233
+                              : _current == 2 && _current == entry.key
+                                  ? 156
+                                  : _current == 4 && _current == entry.key
+                                      ? 30
+                                      : _current == 5 && _current == entry.key
+                                          ? 242
+                                          : _current == 6 &&
+                                                  _current == entry.key
+                                              ? 255
+                                              : 0,
+                        )
+                        .withGreen(
+                          _current == 1 && _current == entry.key
+                              ? 170
+                              : _current == 2 && _current == entry.key
+                                  ? 36
+                                  : _current == 3 && _current == entry.key
+                                      ? 190
+                                      : _current == 4 && _current == entry.key
+                                          ? 136
+                                          : _current == 5 &&
+                                                  _current == entry.key
+                                              ? 148
+                                              : _current == 6 &&
+                                                      _current == entry.key
+                                                  ? 186
+                                                  : _current == 7 &&
+                                                          _current == entry.key
+                                                      ? 238
+                                                      : 0,
+                        )
+                        .withBlue(_current == 1 && _current == entry.key
+                            ? 67
+                            : _current == 2 && _current == entry.key
+                                ? 216
+                                : _current == 3 && _current == entry.key
+                                    ? 232
+                                    : _current == 4 && _current == entry.key
+                                        ? 229
+                                        : _current == 5 && _current == entry.key
+                                            ? 111
+                                            : _current == 6 &&
+                                                    _current == entry.key
+                                                ? 3
+                                                : _current == 7 &&
+                                                        _current == entry.key
+                                                    ? 202
+                                                    : 0)),
               ),
             );
           }).toList(),
@@ -443,7 +494,7 @@ class _CarouselSlideAdTinderPlus extends State<CarouselSlideAdTinderPlus> {
                           ? Colors.black
                           : _current == 1
                               ? Color(0xFFE9AA43)
-                              : Colors.red,
+                              : Color(0xFFFE406F),
                       fontWeight: FontWeight.bold,
                       fontSize: size.width * .04),
                 ),

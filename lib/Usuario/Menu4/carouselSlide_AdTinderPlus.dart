@@ -3,7 +3,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CarouselSlideAdTinderPlus extends StatefulWidget {
-  double height;
   @override
   State<StatefulWidget> createState() {
     return _CarouselSlideAdTinderPlus();

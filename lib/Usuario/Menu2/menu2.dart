@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:tinder_app/Usuario/Menu2/destaques.dart';
 import 'package:tinder_app/Usuario/Menu2/likedYouCards.dart';
+import 'package:tinder_app/data/likes_json.dart';
 
 class Menu2 extends StatefulWidget {
   @override
@@ -22,24 +23,24 @@ class _Menu2 extends State<Menu2> {
   @override
   void initState() {
     super.initState();
-    for (int x = 0; x < 3; x++) {
+    for (int x = 0; x < likes_json.length; x++) {
       likedYouList.add(
-        LikedYouCards(),
+        LikedYouCards(user: likes_json[x]),
       );
     }
-    for (int x = 0; x < 3; x++) {
+    for (int x = 0; x < 4; x++) {
       commonInterest.add(
-        Destaques(),
+        Destaques(user: likes_json[x]),
       );
     }
-    for (int x = 0; x < 3; x++) {
+    for (int x = 0; x < 4; x++) {
       recommendations.add(
-        Destaques(),
+        Destaques(user: likes_json[x]),
       );
     }
-    for (int x = 0; x < 3; x++) {
+    for (int x = 0; x < 4; x++) {
       onlineRecently.add(
-        Destaques(),
+        Destaques(user: likes_json[x]),
       );
     }
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tinder_app/Usuario/Menu3/messageListItem.dart';
 import 'package:tinder_app/Usuario/Menu3/newMatch.dart';
+import 'package:tinder_app/data/chats_json.dart';
 
 class Menu3 extends StatefulWidget {
   @override
@@ -27,12 +28,12 @@ class _Menu3 extends State<Menu3> {
     final searchBar = carouselArea * .1;
     final newMatchesContainerHeight = carouselArea * .25;
     // final messagesContainerHeight = carouselArea * .65;
-    for (int x = 0; x < 3; x++) {
+    for (int x = 0; x < newMatches_json.length; x++) {
       newMatchesList.add(SizedBox(
         width: size.width * .02,
       ));
       newMatchesList.add(
-        NewMatch(),
+        new NewMatch(jsonUser: newMatches_json[x]),
       );
     }
     newMatchesList.add(
@@ -41,8 +42,10 @@ class _Menu3 extends State<Menu3> {
       ),
     );
 
-    for (int x = 0; x < 3; x++) {
-      messageList.add(MessageListItem());
+    for (int x = 0; x < userMessages.length; x++) {
+      messageList.add(MessageListItem(
+        json_user: userMessages[x],
+      ));
     }
 
     return Column(
@@ -127,10 +130,7 @@ class _Menu3 extends State<Menu3> {
                         ),
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
-                          child: Row(
-                              // crossAxisAlignment: CrossAxisAlignment.start,
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: newMatchesList),
+                          child: Row(children: newMatchesList),
                         )
                       ],
                     ),

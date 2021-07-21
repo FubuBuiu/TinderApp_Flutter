@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 
 class MessageListItem extends StatelessWidget {
-  // final index;
+  final json_user;
+
+  const MessageListItem({Key key, @required this.json_user}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final menuBarHeight = size.height * .07;
     final paddingBarNotification = MediaQuery.of(context).padding.top;
     final carouselArea = size.height - menuBarHeight - paddingBarNotification;
-    final heightItemList = (carouselArea * .65) * .25;
+    final heightItemList = (carouselArea * .65) * .23;
     return Container(
       height: heightItemList,
       width: size.width,
@@ -17,10 +20,13 @@ class MessageListItem extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Container(
-            height: heightItemList * .85,
+            // height: heightItemList * .75,
             width: heightItemList * .85,
             decoration: BoxDecoration(
-                color: Colors.red, borderRadius: BorderRadius.circular(100)),
+                color: Colors.red,
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                    image: AssetImage(json_user['img']), fit: BoxFit.cover)),
           ),
           Expanded(
             child: Container(
@@ -33,15 +39,17 @@ class MessageListItem extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Name",
-                        style: TextStyle(fontSize: heightItemList * .18),
+                        json_user["name"],
+                        style: TextStyle(
+                            fontSize: heightItemList * .18,
+                            fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 3,
                       ),
                       Text(
-                        "last message",
-                        style: TextStyle(fontSize: heightItemList * .13),
+                        json_user["message"],
+                        style: TextStyle(fontSize: heightItemList * .16),
                       ),
                     ],
                   ),

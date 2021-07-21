@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 class NewMatch extends StatelessWidget {
   // final index;
+  final jsonUser;
+
+  const NewMatch({Key key, @required this.jsonUser}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -9,40 +13,41 @@ class NewMatch extends StatelessWidget {
     final paddingBarNotification = MediaQuery.of(context).padding.top;
     final carouselArea = size.height - menuBarHeight - paddingBarNotification;
     final newMatchHeight = (carouselArea * .25) - ((carouselArea * .25) * .2);
-    final circularPictureHeight = size.width * .18;
+    final widthCircle = size.width * .22;
+
     return Container(
-      alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(vertical: newMatchHeight * .15),
       height: newMatchHeight,
-      width: size.width * .18,
-      // color: Colors.red,
+      // padding: EdgeInsets.symmetric(vertical: newMatchHeight * .1),
+      // color: Colors.blue,
       child: InkWell(
         splashColor: Colors.transparent,
         onTap: () {},
         child: Container(
-          child: Stack(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Align(
-                alignment: Alignment.topCenter,
-                child: Container(
-                  height: circularPictureHeight,
-                  width: circularPictureHeight,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
+              Container(
+                height: widthCircle,
+                width: widthCircle,
+                margin: EdgeInsets.only(bottom: newMatchHeight * .05),
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
                     color: Colors.red,
-                  ),
+                    image: DecorationImage(
+                        image: AssetImage(jsonUser["img"]), fit: BoxFit.cover)),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: widthCircle,
+                child: Text(
+                  jsonUser["name"],
+                  style: TextStyle(
+                      fontSize: newMatchHeight * .1,
+                      fontWeight: FontWeight.bold),
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Text(
-                  "Pessoa",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: newMatchHeight * .1),
-                  textAlign: TextAlign.center,
-                ),
-              )
             ],
           ),
         ),

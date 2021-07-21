@@ -36,6 +36,8 @@ flutter:
   assets:
      - assets/animation/
      - assets/svg/
+     - assets/images/
+     - assets/images/girls/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
